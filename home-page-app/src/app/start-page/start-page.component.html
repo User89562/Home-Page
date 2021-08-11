@@ -1,0 +1,28 @@
+<mat-tab-group animationDuration="0ms">
+    <mat-tab *ngFor="let page of startPageLinks" [label]='page.tabName'>
+        <ng-template matTabContent>
+            <div fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="15px" class="page-group-container">
+                <mat-card *ngFor="let linkGroup of page.linkGroups" fxLayoutAlign="center">
+                <div fxFlexFill fxLayoutAlign="center center">
+                    <img mat-card-image [src]="randomUrl(linkGroup.image!)">
+                    <div class="content-container"  fxLayoutGap="15px" fxLayout="row wrap" fxFlexFill fxLayoutAlign="center center">
+                        <div *ngFor="let urlGroup of linkGroup.urlGroups" class="url-group-container" fxLayout="column wrap" >
+                                <div class="url-container" >
+                                    <a mat-stroked-button href="{{urlGroup.url}}" [ngStyle]="{'background-color': urlGroup?.backgroundColor}">
+                                        {{urlGroup.urlName}}
+                                    </a> 
+                                </div>
+                        </div>
+
+                    </div>
+                    
+                </div>
+                    
+                </mat-card>
+            </div>
+        </ng-template>
+        
+        
+    </mat-tab>
+</mat-tab-group>
+

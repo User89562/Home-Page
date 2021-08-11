@@ -1,4 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+    background-image:  url("/assets/images/spacescape_w7680_h1440_cw7680_ch1440.jpg");
+    font-size: 25px !important;
+    font-variant: small-caps !important;
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    color:whitesmoke;
+}
+.mat-tab-label {
+    font-size: 35px !important;
+    color: whitesmoke;
+}
+
+.mat-card {
+    padding: 0px !important;
+}
