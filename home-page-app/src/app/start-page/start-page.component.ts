@@ -1,5 +1,3 @@
-import { AfterContentInit, ChangeDetectorRef } from '@angular/core';
-import { ChangeDetectionStrategy } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { STARTPAGE, StartPageLinks } from '../json';
 
@@ -7,23 +5,24 @@ import { STARTPAGE, StartPageLinks } from '../json';
   selector: 'app-start-page',
   templateUrl: './start-page.component.html',
   styleUrls: ['./start-page.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class StartPageComponent implements OnInit, AfterContentInit {
+export class StartPageComponent implements OnInit {
   startPageLinks!: StartPageLinks[];
-  opacity= '1';
 
-  constructor(private changeDetector : ChangeDetectorRef) { }
+  constructor() { }
 
   ngOnInit() {
     this.startPageLinks = STARTPAGE;
+    this.startPageLinks.forEach(startPageLink => {
+      startPageLink.linkGroups.forEach(linkGroup => {
+        linkGroup.selectedMedia = this.randomUrl(linkGroup.media!);
+      });
+    });
   }
 
-  ngAfterContentInit(){ this.changeDetector.detectChanges(); }
-
-  randomUrl(images: string[]): string {
-    const max = images?.length-1;
+  randomUrl(media: string[]): string {
+    const max = media?.length-1;
     const min = 0;
-    return images[Math.floor(Math.random() * (max - min + 1) + min)];
+    return media[Math.floor(Math.random() * (max - min + 1) + min)];
   }
 }
