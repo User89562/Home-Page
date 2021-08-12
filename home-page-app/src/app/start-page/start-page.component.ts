@@ -8,21 +8,22 @@ import { STARTPAGE, StartPageLinks } from '../json';
 })
 export class StartPageComponent implements OnInit {
   startPageLinks!: StartPageLinks[];
+  localStorageName: string = 'local-home-page'
 
   constructor() { }
 
   ngOnInit() {
     this.startPageLinks = STARTPAGE;
-    this.startPageLinks.forEach(startPageLink => {
-      startPageLink.linkGroups.forEach(linkGroup => {
-        linkGroup.selectedMedia = this.randomUrl(linkGroup.media!);
-      });
-    });
+      this.startPageLinks.forEach(startPageLink => {
+        startPageLink.linkGroups.forEach(linkGroup => {
+          linkGroup.selectedMedia = this.randomUrl(linkGroup.media!);
+        });
+      });    
   }
 
   randomUrl(media: string[]): string {
-    const max = media?.length-1;
+    const max = media?.length;
     const min = 0;
-    return media[Math.floor(Math.random() * (max - min + 1) + min)];
+    return media[Math.floor(Math.random() * (max - min) + min)];
   }
 }

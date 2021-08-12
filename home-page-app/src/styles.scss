@@ -2,7 +2,8 @@
 
 html, body { height: 100%; }
 body {
-    background-image:  url("~/assets/images/spacescape_w7680_h1440_cw7680_ch1440.jpg");
+    background-image: url("~/assets/images/animelandscape-test1.jpg");
+    background-size: cover;
     font-size: 25px !important;
     font-variant: small-caps !important;
     margin: 0; 
@@ -11,7 +12,8 @@ body {
 }
 .mat-tab-label {
     font-size: 35px !important;
-    color: whitesmoke;
+    color: wheat;
+    text-shadow: 0px 0px 3px black, 0px 0px 3px black, 0px 0px 3px black;
 }
 
 .mat-card {

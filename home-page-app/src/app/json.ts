@@ -1,4 +1,3 @@
-import { Colors } from "./colors";
 
 export interface StartPageLinks {
   tabName: string;
@@ -18,6 +17,7 @@ export interface UrlGroup {
   backgroundColor?: string;
 }
 
+//TODO: add images for genshin, league, gfl, fgo, princess connect, konosuba and misc
 export const STARTPAGE: StartPageLinks[] = [
   {
     tabName: "Home",
@@ -251,10 +251,12 @@ export const STARTPAGE: StartPageLinks[] = [
       },
       {
         media: [
-          "assets/images/wallhaven-z8zl6o.jpg",
-          "assets/images/wallhaven-z8zgqw.jpg",
-          "assets/images/wallhaven-z8z7rv.jpg",
-          "assets/images/wallhaven-z8qy3g.jpg",
+          "assets/images/league_of_legends1.jpg",
+          "assets/images/league_of_legends2.jpg",
+          "assets/images/league_of_legends3.jpg",
+          "assets/images/league_of_legends4.jpg",
+          "assets/images/league_of_legends5.png",
+          "assets/images/league_of_legends6.png",
         ],
         groupName: 'League of Legends',
         urlGroups: [

@@ -1,7 +1,6 @@
-<mat-tab-group animationDuration="0ms">
+<mat-tab-group animationDuration="0ms" [selectedIndex]="0">
     <mat-tab *ngFor="let page of startPageLinks" [label]='page.tabName'>
-        <ng-template matTabContent>
-            <div fxLayout="row wrap" fxLayoutAlign="space-evenly center" class="page-group-container">
+            <div fxLayout="column wrap" fxLayoutAlign="space-evenly center" class="page-group-container">
                 <mat-card *ngFor="let linkGroup of page.linkGroups" fxLayoutAlign="center">
                     <div fxFlexFill fxLayoutAlign="center center" >
                         <img mat-card-image [src]="linkGroup.selectedMedia">
@@ -19,9 +18,6 @@
                     </div>
                 </mat-card>
             </div>
-        </ng-template>
-        
-        
     </mat-tab>
 </mat-tab-group>
 
