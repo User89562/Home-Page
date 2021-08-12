@@ -26,7 +26,7 @@ export const STARTPAGE: StartPageLinks[] = [
         media: [
           "assets/images/pbm3yulltvn51.jpg",
           "assets/images/ofas72yn1kt01.jpg",
-          "assets/images/CSP4y3gv1UbZded2kff_0dmH3BJ-Kx2fDZAdQeizkaQ.webp",
+          "assets/images/wallhaven-3z369y.jpg",
           "assets/images/wallhaven-6omo76.jpg",
         ],
         urlGroups: [
@@ -224,7 +224,7 @@ export const STARTPAGE: StartPageLinks[] = [
             urlName: 'Main Reddit',
           },
           {
-            url: 'https://old.reddit.com/r/genshin_impact/',
+            url: 'https://old.reddit.com/r/genshin_impact_leaks/',
             urlName: 'Leaks Reddit',
           },
           {
