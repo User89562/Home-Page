@@ -12,7 +12,6 @@
     overflow: hidden;
     max-width: 500px;
     min-width: 500px;
-    background-color: rgba(0, 0, 0, 0.9);
     outline: #005cb2 solid 5px;
     margin: 25px;
 }
@@ -21,7 +20,7 @@
     margin-top: unset !important;
     margin: unset;
     min-height: 282px;
-    filter:opacity(70%);
+    filter:opacity(80%);
     filter:brightness(80%);
 }
 
@@ -33,7 +32,7 @@ a{
     text-align: center;
     font-size: 25px;
     outline: 2px solid black;
-    background-color: rgba(245, 222, 179, 0.856);
+    background-color: rgba(245, 222, 179);
     color:black;
     margin-top: 5px;
     &:hover {

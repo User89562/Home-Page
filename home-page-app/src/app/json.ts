@@ -212,10 +212,18 @@ export const STARTPAGE: StartPageLinks[] = [
       },
       {
         media: [
-          "assets/images/wallhaven-z8zl6o.jpg",
-          "assets/images/wallhaven-z8zgqw.jpg",
-          "assets/images/wallhaven-z8z7rv.jpg",
-          "assets/images/wallhaven-z8qy3g.jpg",
+          "assets/images/genshin1.jpg",
+          "assets/images/genshin2.jpg",
+          "assets/images/genshin3.jpg",
+          "assets/images/genshin4.jpg",
+          "assets/images/genshin5.jpg",
+          "assets/images/genshin6.jpg",
+          "assets/images/genshin7.jpg",
+          "assets/images/genshin8.jpg",
+          "assets/images/genshin9.png",
+          "assets/images/genshin10.jpg",
+          "assets/images/genshin11.jpg",
+          "assets/images/genshin12.jpg",
         ],
         groupName: 'Genshin Impact',
         urlGroups: [
@@ -285,7 +293,13 @@ export const STARTPAGE: StartPageLinks[] = [
     linkGroups: [
       {
         media: [
-          "assets/images/gundam-12.jpg",
+          "assets/images/gfl1.png",
+          "assets/images/gfl2.jpg",
+          "assets/images/gfl3.png",
+          "assets/images/gfl4.png",
+          "assets/images/gfl6.png",
+          "assets/images/gfl7.png",
+          "assets/images/gfl8.png",
         ],
         groupName: 'Girls\' Frontline',
         urlGroups: [
