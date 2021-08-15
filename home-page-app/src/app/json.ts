@@ -25,7 +25,7 @@ export const STARTPAGE: StartPageLinks[] = [
       {
         media: [
           "assets/images/pbm3yulltvn51.jpg",
-          "assets/images/ofas72yn1kt01.jpg",
+          "assets/images/wallhaven-6omxxl.jpg",
           "assets/images/wallhaven-3z369y.jpg",
           "assets/images/wallhaven-6omo76.jpg",
         ],
