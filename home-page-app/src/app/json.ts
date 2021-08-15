@@ -17,7 +17,7 @@ export interface UrlGroup {
   backgroundColor?: string;
 }
 
-//TODO: add images for genshin, league, gfl, fgo, princess connect, konosuba and misc
+//TODO: add images for fgo, princess connect, konosuba and misc
 export const STARTPAGE: StartPageLinks[] = [
   {
     tabName: "Home",
@@ -129,10 +129,10 @@ export const STARTPAGE: StartPageLinks[] = [
     linkGroups: [
       {
         media: [
-          "assets/images/wallhaven-z8zl6o.jpg",
-          "assets/images/wallhaven-z8zgqw.jpg",
-          "assets/images/wallhaven-z8z7rv.jpg",
-          "assets/images/wallhaven-z8qy3g.jpg",
+          "assets/images/wallhaven-v9oejp.jpg",
+          "assets/images/wallhaven-l3zxvl.jpg",
+          "assets/images/wallhaven-x8z3qo.jpg",
+          "assets/images/wallhaven-wq1wlr.jpg",
         ],
         groupName: 'Angular',
         urlGroups: [
@@ -152,10 +152,10 @@ export const STARTPAGE: StartPageLinks[] = [
       },
       {
         media: [
-          "assets/images/wallhaven-z8zl6o.jpg",
-          "assets/images/wallhaven-z8zgqw.jpg",
-          "assets/images/wallhaven-z8z7rv.jpg",
-          "assets/images/wallhaven-z8qy3g.jpg",
+          "assets/images/wallhaven-o3gz57.jpg",
+          "assets/images/wallhaven-o3ym1p.jpg",
+          "assets/images/wallhaven-pkl5pm.jpg",
+          "assets/images/wallhaven-pkwq73.jpg",
         ],
         urlGroups: [
           {
@@ -170,8 +170,10 @@ export const STARTPAGE: StartPageLinks[] = [
       },
       {
         media: [
-          "assets/images/wallhaven-z8zgqw.jpg",
-          "assets/images/wallhaven-z8zl6o.jpg",
+          "assets/images/wallhaven-e78kjw.jpg",
+          "assets/images/wallhaven-e79j6o.jpg",
+          "assets/images/wallhaven-e79om8.jpg",
+          "assets/images/wallhaven-dpkyqj.jpg",
         ],
         urlGroups: [
           {
@@ -294,7 +296,7 @@ export const STARTPAGE: StartPageLinks[] = [
       {
         media: [
           "assets/images/gfl1.png",
-          "assets/images/gfl2.jpg",
+          "assets/images/gfl2.png",
           "assets/images/gfl3.png",
           "assets/images/gfl4.png",
           "assets/images/gfl6.png",
@@ -379,10 +381,23 @@ export const STARTPAGE: StartPageLinks[] = [
       },
       {
         media: [
-          "assets/images/wallhaven-z8zl6o.jpg",
-          "assets/images/wallhaven-z8zgqw.jpg",
-          "assets/images/wallhaven-z8z7rv.jpg",
-          "assets/images/wallhaven-z8qy3g.jpg",
+          "assets/images/fgo1.png",
+          "assets/images/fgo2.png",
+          "assets/images/fgo3.jpg",
+          "assets/images/fgo4.png",
+          "assets/images/fgo5.png",
+          "assets/images/fgo6.jpg",
+          "assets/images/fgo7.jpg",
+          "assets/images/fgo8.png",
+          "assets/images/fgo9.png",
+          "assets/images/fgo10.png",
+          "assets/images/fgo11.png",
+          "assets/images/fgo12.jpg",
+          "assets/images/fgo13.jpg",
+          "assets/images/fgo14.png",
+          "assets/images/fgo15.jpg",
+          "assets/images/fgo16.png",
+          "assets/images/fgo17.jpg",
         ],
         groupName: 'Fate Grand Order',
         urlGroups: [
@@ -414,10 +429,16 @@ export const STARTPAGE: StartPageLinks[] = [
       },
       {
         media: [
-          "assets/images/wallhaven-z8zl6o.jpg",
-          "assets/images/wallhaven-z8zgqw.jpg",
-          "assets/images/wallhaven-z8z7rv.jpg",
-          "assets/images/wallhaven-z8qy3g.jpg",
+          "assets/images/pricone1.jpg",
+          "assets/images/pricone2.jpg",
+          "assets/images/pricone3.jpg",
+          "assets/images/pricone4.jpg",
+          "assets/images/pricone5.jpg",
+          "assets/images/pricone6.jpg",
+          "assets/images/pricone7.png",
+          "assets/images/pricone8.png",
+          "assets/images/pricone9.jpg",
+          "assets/images/pricone10.jpg",
         ],
         groupName: 'Princess Connect',
         urlGroups: [
@@ -441,10 +462,17 @@ export const STARTPAGE: StartPageLinks[] = [
       },
       {
         media: [
-          "assets/images/wallhaven-z8zl6o.jpg",
-          "assets/images/wallhaven-z8zgqw.jpg",
-          "assets/images/wallhaven-z8z7rv.jpg",
-          "assets/images/wallhaven-z8qy3g.jpg",
+          "assets/images/konosuba1.jpg",
+          "assets/images/konosuba2.png",
+          "assets/images/konosuba3.jpg",
+          "assets/images/konosuba4.jpg",
+          "assets/images/konosuba5.jpg",
+          "assets/images/konosuba6.png",
+          "assets/images/konosuba7.jpg",
+          "assets/images/konosuba8.png",
+          "assets/images/konosuba9.jpg",
+          "assets/images/konosuba10.png",
+          "assets/images/konosuba11.jpg",
         ],
         groupName: 'Konosuba',
         urlGroups: [
@@ -460,10 +488,10 @@ export const STARTPAGE: StartPageLinks[] = [
       },
       {
         media: [
-          "assets/images/wallhaven-z8zl6o.jpg",
-          "assets/images/wallhaven-z8zgqw.jpg",
-          "assets/images/wallhaven-z8z7rv.jpg",
-          "assets/images/wallhaven-z8qy3g.jpg",
+          "assets/images/wallhaven-z8zjdo.jpg",
+          "assets/images/wallhaven-z8qldy.jpg",
+          "assets/images/wallhaven-z8q59j.jpg",
+          "assets/images/wallhaven-z8p1jy.jpg",
         ],
         groupName: 'Misc',
         urlGroups: [
