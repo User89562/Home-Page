@@ -1,3 +1,4 @@
+import { Colors } from './colors';
 
 export interface StartPageLinks {
   tabName: string;
@@ -33,6 +34,7 @@ export const STARTPAGE: StartPageLinks[] = [
           {
             url: "https://old.reddit.com/",
             urlName: "Reddit",
+            backgroundColor: Colors.red(1),
           },
           {
             url: "https://www.livechart.me/schedule/tv",
@@ -67,6 +69,7 @@ export const STARTPAGE: StartPageLinks[] = [
           {
             url: "https://www.twitch.tv/directory/all",
             urlName: "Twitch",
+            backgroundColor: Colors.purple(1),
           },
           {
             url: "https://www.youtube.com/",
@@ -75,6 +78,7 @@ export const STARTPAGE: StartPageLinks[] = [
           {
             url: "https://open.spotify.com/",
             urlName: "Spotify",
+            backgroundColor: Colors.green(2),
           },
         ],
       },
@@ -111,6 +115,7 @@ export const STARTPAGE: StartPageLinks[] = [
           {
             url: "http://192.168.1.15:8090",
             urlName: "Downloader",
+            backgroundColor: Colors.indigo(1)
           },
           {
             url: "https://github.com/login",
@@ -232,6 +237,7 @@ export const STARTPAGE: StartPageLinks[] = [
           {
             url: 'https://old.reddit.com/r/genshin_impact/',
             urlName: 'Main Reddit',
+            backgroundColor: Colors.red(1),
           },
           {
             url: 'https://old.reddit.com/r/genshin_impact_leaks/',
@@ -240,10 +246,12 @@ export const STARTPAGE: StartPageLinks[] = [
           {
             url: 'https://webstatic-sea.mihoyo.com/app/ys-map-sea/?lang=en-us#/map/2?shown_types=2,3,154&center=2747.00,786.00&zoom=-3.00',
             urlName: 'Map',
+            backgroundColor: Colors.teal(2),
           },
           {
             url: 'https://docs.google.com/spreadsheets/d/1a--WPcWT7BOtw5J9TwJoRHEg_BAeT1mhAR0Fvdn_SZI/edit?usp=sharing',
             urlName: 'Google Doc',
+            backgroundColor: Colors.light_blue(2)
           },
           {
             url: 'https://genshin.honeyhunterworld.com/',
@@ -308,6 +316,7 @@ export const STARTPAGE: StartPageLinks[] = [
           {
             url: 'https://old.reddit.com/r/girlsfrontline/',
             urlName: 'Reddit',
+            backgroundColor: Colors.red(1)
           },
           {
             url: 'https://iopwiki.com/wiki/Girls\'_Frontline_Wiki',
@@ -316,6 +325,7 @@ export const STARTPAGE: StartPageLinks[] = [
           {
             url: 'https://docs.google.com/spreadsheets/d/1by5rcLdKXdhLClfVQ-FLvK_OM4Xko0CT9peKQwQCfXw/edit?usp=sharing',
             urlName: 'Info Doc',
+            backgroundColor: Colors.light_blue(2)
           },
           {
             url: 'https://www.gflcorner.com/',
@@ -364,6 +374,7 @@ export const STARTPAGE: StartPageLinks[] = [
           {
             url: 'https://pengupengupengu.github.io/gflmaps/',
             urlName: 'Maps',
+            backgroundColor: Colors.teal(1)
           },
           {
             url: 'https://docs.google.com/spreadsheets/d/1TjHC4Vaed8dFqSkagM6teNlmBjFGPiUbTRnTnvxnnu4/edit#gid=296924292',
@@ -376,6 +387,7 @@ export const STARTPAGE: StartPageLinks[] = [
           {
             url: 'https://docs.google.com/document/d/1nRRyH9IH7dg7BRow8Y_hh2bNAlLxtpRB6cr_kzl_5NE/edit#',
             urlName: 'Next Ranking',
+            backgroundColor: Colors.indigo(2),
           },
         ],
       },
@@ -406,18 +418,17 @@ export const STARTPAGE: StartPageLinks[] = [
           {
             url: 'https://grandorder.wiki/Main_Page',
             urlName: 'Wiki',
-          },
-          {
-            url: "https://material.io/resources/icons/?style=baseline",
-            urlName: "Angular Icons",
+            backgroundColor: Colors.green(1)
           },
           {
             url: 'https://gamepress.gg/grandorder/',
             urlName: 'Gamepress',
+            backgroundColor: Colors.teal(1)
           },
           {
             url: 'https://gamepress.gg/grandorder/event-guides',
             urlName: 'Events',
+            backgroundColor: Colors.indigo(1)
           },
           {
             url: 'https://shipfu.moe/fgo/',
@@ -450,10 +461,12 @@ export const STARTPAGE: StartPageLinks[] = [
           {
             url: "https://docs.google.com/spreadsheets/d/18VjvDwBrTinuWtqbxUxo0BNOvFpmztFO2p2D03tUxdA/edit#gid=1114939808",
             urlName: "Ranking Recommendation",
+            backgroundColor: Colors.light_blue(2)
           },
           {
             url: 'https://docs.qq.com/sheet/DWlhOaWJXYnZwVklT?tab=1ztn7s',
             urlName: 'Clan Battle Records',
+            backgroundColor: Colors.purple(1)
           },
         ],
       },
@@ -495,6 +508,7 @@ export const STARTPAGE: StartPageLinks[] = [
           {
             url: 'https://old.reddit.com/r/gachagaming/',
             urlName: 'Gacha Gaming',
+            backgroundColor: Colors.red(1)
           },
           {
             url: 'https://docs.google.com/spreadsheets/d/1sIz4LP3j-BPCmR3MMeu9Ic5Uqi3NckflybfxRvWMk2U/edit?usp=sharing',

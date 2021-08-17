@@ -5,7 +5,7 @@
                 <mat-card *ngFor="let linkGroup of page.linkGroups" fxLayoutAlign="center">
                     <div fxFlexFill fxLayoutAlign="center center" >
                         <img mat-card-image [src]="linkGroup.selectedMedia">
-                        <h1 class="group-name">{{linkGroup.groupName}}</h1>
+                        <h1 class="group-name">{{linkGroup?.groupName}}</h1>
                         <div class="content-container"  fxLayout="row wrap" fxFlexFill fxLayoutAlign="center center">
                             <div *ngFor="let urlGroup of linkGroup.urlGroups" class="url-group-container" fxLayout="column wrap" >
                                     <div class="url-container" >

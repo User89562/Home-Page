@@ -1,50 +1,50 @@
 export class Colors {
+    static red(n: number): string {
+        switch (n){
+          case 2:
+            return '#ff8a80';
+          default:
+            return '#ffcdd2';
+        }
+    }
     static purple(n: number): string {
-        switch (n){
-          case 2:
-            return '#7c43bd';
-          default:
-            return '#9c4dcc';
-        }
+      switch (n){
+        case 2:
+          return '#ea80fc';
+        default:
+          return '#e1bee7';
+      }
     }
-    static indigo(n: number): string {
-        switch (n){
-          case 2:
-            return '#534bae';
-          default:
-            return '#666ad1';
-        }
+  static indigo(n: number): string {
+    switch (n){
+      case 2:
+        return '#8c9eff';
+      default:
+        return '#c5cae9';
     }
-    static lightGreen(n: number): string {
-        switch (n){
-          case 2:
-            return '#255d00';
-          default:
-            return '#4b830d';
-        }
+  }
+  static green(n: number): string {
+    switch (n){
+      case 2:
+        return '#b9f6ca';
+      default:
+        return '#c8e6c9';
     }
-    static green(n: number): string {
-        switch (n){
-          case 2:
-            return '#00701a';
-          default:
-            return '#003d00';
-        }
+  }
+  static light_blue(n: number): string {
+    switch (n){
+      case 2:
+        return '#80d8ff';
+      default:
+        return '#b3e5fc';
     }
-    static blueGrey(n: number): string {
-        switch (n){
-          case 2:
-            return '#102027';
-          default:
-            return '#1c313a';
-        }
+  }
+  static teal(n: number): string {
+    switch (n){
+      case 2:
+        return '#a7ffeb';
+      default:
+        return '#b2dfdb';
     }
-    static cyan(n: number): string {
-        switch (n){
-          case 2:
-            return '#005662';
-          default:
-            return '#007c91';
-        }
-    }
+  }
 }
