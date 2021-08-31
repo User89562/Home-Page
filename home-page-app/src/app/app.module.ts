@@ -6,13 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { BackgroundRendererComponent } from './background-renderer/background-renderer.component';
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     StartPageComponent,
-    
-  ],
+    BackgroundRendererComponent,
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,

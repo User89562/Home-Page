@@ -1,26 +1,45 @@
-<mat-tab-group animationDuration="0ms" [selectedIndex]="0">
-    <mat-tab *ngFor="let page of startPageLinks" [label]='page.tabName'>
-        <ng-template matTabContent>
-            <div fxLayout="column wrap" fxLayoutAlign="space-evenly center" class="page-group-container">
-                <mat-card *ngFor="let linkGroup of page.linkGroups" fxLayoutAlign="center">
-                    <div fxFlexFill fxLayoutAlign="center center" >
-                        <img mat-card-image [src]="linkGroup.selectedMedia">
-                        <h1 class="group-name">{{linkGroup?.groupName}}</h1>
-                        <div class="content-container"  fxLayout="row wrap" fxFlexFill fxLayoutAlign="center center">
-                            <div *ngFor="let urlGroup of linkGroup.urlGroups" class="url-group-container" fxLayout="column wrap" >
+<div  class="background-container">
+    <app-background-renderer [media]="chosenBackground.link" [mediaType]="chosenBackground.type"></app-background-renderer>
+    <mat-tab-group animationDuration="0ms" [selectedIndex]="selectedTabIndex" (selectedIndexChange)="tabChanged($event)">
+        <mat-tab *ngFor="let page of startPageLinks" [label]='page.tabName'  >
+            <ng-template matTabContent>
+                <div fxLayout="column wrap" fxLayoutAlign="space-evenly center" class="page-group-container" [ngStyle]="{visibility: visibility}">
+                    <mat-card *ngFor="let linkGroup of page.linkGroups" fxLayoutAlign="center">
+                        <div fxFlexFill fxLayoutAlign="center center" >
+                            <img mat-card-image [src]=" assetsPath +linkGroup.selectedMedia">
+                            <h1 class="group-name">{{linkGroup?.groupName}}</h1>
+                            <div class="content-container"  fxLayout="row wrap" fxFlexFill fxLayoutAlign="center center">
+                                <div *ngFor="let urlGroup of linkGroup.urlGroups" class="url-group-container" fxLayout="column wrap" >
                                     <div class="url-container" >
-                                        <a mat-stroked-button href="{{urlGroup.url}}" [ngStyle]="{'background-color': urlGroup?.backgroundColor}">
+                                        <a mat-stroked-button href="{{urlGroup.url}}" [ngStyle]="{'background-color': urlGroup.backgroundColor ? urlGroup?.backgroundColor : 'rgba(245, 222, 179)' }">
                                             {{urlGroup.urlName}}
                                         </a> 
                                     </div>
+                                </div>
                             </div>
                         </div>
-                        
-                    </div>
-                </mat-card>
-            </div>
-        </ng-template>
-            
-    </mat-tab>
-</mat-tab-group>
+                    </mat-card>
+                </div>
+            </ng-template>   
+        </mat-tab>
+    </mat-tab-group>
+    <button mat-icon-button aria-label="Settings icon button" class="settings-button" [matMenuTriggerFor]="menu">
+        <mat-icon>settings</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu" yPosition="above" xPosition="before">
+        <button mat-menu-item (click)="toggleVisibility()">
+          <mat-icon>visibility</mat-icon>
+          <span>Show/Hide</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>video_label</mat-icon>
+          <span>Pause/Play</span>
+        </button>
+        <button mat-menu-item (click)="toggleBackgroundType()">
+          <mat-icon>privacy_tip</mat-icon>
+          <span>NSFW</span>
+        </button>
+      </mat-menu>
+</div>
+
 

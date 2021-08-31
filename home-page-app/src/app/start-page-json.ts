@@ -18,17 +18,16 @@ export interface UrlGroup {
   backgroundColor?: string;
 }
 
-//TODO: add images for fgo, princess connect, konosuba and misc
 export const STARTPAGE: StartPageLinks[] = [
   {
     tabName: "Home",
     linkGroups: [
       {
         media: [
-          "assets/images/pbm3yulltvn51.jpg",
-          "assets/images/wallhaven-6omxxl.jpg",
-          "assets/images/wallhaven-3z369y.jpg",
-          "assets/images/wallhaven-6omo76.jpg",
+          "pbm3yulltvn51.jpg",
+          "wallhaven-6omxxl.jpg",
+          "wallhaven-3z369y.jpg",
+          "wallhaven-6omo76.jpg",
         ],
         urlGroups: [
           {
@@ -51,6 +50,7 @@ export const STARTPAGE: StartPageLinks[] = [
           {
             url: "https://discord.com/login",
             urlName: "Discord",
+            backgroundColor: Colors.teal(1)
           },
           {
             url: "https://www.virustotal.com/gui/",
@@ -60,10 +60,10 @@ export const STARTPAGE: StartPageLinks[] = [
       },
       {
         media: [
-          "assets/images/wallhaven-575r67.jpg",
-          "assets/images/wallhaven-28dro6.jpg",
-          "assets/images/wallhaven-28zr39.jpg",
-          "assets/images/wallhaven-72j8jo.jpg",
+          "wallhaven-575r67.jpg",
+          "wallhaven-28dro6.jpg",
+          "wallhaven-28zr39.jpg",
+          "wallhaven-72j8jo.jpg",
         ],
         urlGroups: [
           {
@@ -84,10 +84,10 @@ export const STARTPAGE: StartPageLinks[] = [
       },
       {
         media: [
-          "assets/images/wallhaven-g7532l.jpg",
-          "assets/images/wallhaven-g75dq3.jpg",
-          "assets/images/wallhaven-j3wq5p.jpg",
-          "assets/images/wallhaven-j3wqd5.jpg",
+          "wallhaven-l3zxvl.jpg",
+          "wallhaven-g75dq3.jpg",
+          "wallhaven-j3wq5p.jpg",
+          "wallhaven-j3wqd5.jpg",
         ],
         urlGroups: [
           {
@@ -106,10 +106,10 @@ export const STARTPAGE: StartPageLinks[] = [
       },
       {
         media: [
-          "assets/images/wallhaven-m91x28.jpg",
-          "assets/images/wallhaven-m9zovy.jpg",
-          "assets/images/wallhaven-l3z9rp.jpg",
-          "assets/images/wallhaven-k71rzd.jpg",
+          "wallhaven-m91x28.jpg",
+          "wallhaven-m9zovy.jpg",
+          "wallhaven-l3z9rp.jpg",
+          "wallhaven-k71rzd.jpg",
         ],
         urlGroups: [
           {
@@ -134,10 +134,10 @@ export const STARTPAGE: StartPageLinks[] = [
     linkGroups: [
       {
         media: [
-          "assets/images/wallhaven-v9oejp.jpg",
-          "assets/images/wallhaven-l3zxvl.jpg",
-          "assets/images/wallhaven-x8z3qo.jpg",
-          "assets/images/wallhaven-wq1wlr.jpg",
+          "wallhaven-g7532l.jpg",
+          "wallhaven-v9oejp.jpg",
+          "wallhaven-x8z3qo.jpg",
+          "wallhaven-wq1wlr.jpg",
         ],
         groupName: 'Angular',
         urlGroups: [
@@ -157,10 +157,10 @@ export const STARTPAGE: StartPageLinks[] = [
       },
       {
         media: [
-          "assets/images/wallhaven-o3gz57.jpg",
-          "assets/images/wallhaven-o3ym1p.jpg",
-          "assets/images/wallhaven-pkl5pm.jpg",
-          "assets/images/wallhaven-pkwq73.jpg",
+          "wallhaven-o3gz57.jpg",
+          "wallhaven-o3ym1p.jpg",
+          "wallhaven-pkl5pm.jpg",
+          "wallhaven-pkwq73.jpg",
         ],
         urlGroups: [
           {
@@ -175,10 +175,10 @@ export const STARTPAGE: StartPageLinks[] = [
       },
       {
         media: [
-          "assets/images/wallhaven-e78kjw.jpg",
-          "assets/images/wallhaven-e79j6o.jpg",
-          "assets/images/wallhaven-e79om8.jpg",
-          "assets/images/wallhaven-dpkyqj.jpg",
+          "wallhaven-e78kjw.jpg",
+          "wallhaven-e79j6o.jpg",
+          "wallhaven-e79om8.jpg",
+          "wallhaven-dpkyqj.jpg",
         ],
         urlGroups: [
           {
@@ -194,12 +194,12 @@ export const STARTPAGE: StartPageLinks[] = [
     linkGroups: [
       {
         media: [
-          "assets/images/920126.jpg",
-          "assets/images/555246.jpg",
-          "assets/images/920116.jpg",
-          "assets/images/920117.jpg",
-          "assets/images/920122.jpg",
-          "assets/images/920131.jpg",
+          "920126.jpg",
+          "555246.jpg",
+          "920116.jpg",
+          "920117.jpg",
+          "920122.jpg",
+          "920131.jpg",
         ],
         groupName: 'Lost Ark',
         urlGroups: [
@@ -219,24 +219,30 @@ export const STARTPAGE: StartPageLinks[] = [
       },
       {
         media: [
-          "assets/images/genshin1.jpg",
-          "assets/images/genshin2.jpg",
-          "assets/images/genshin3.jpg",
-          "assets/images/genshin4.jpg",
-          "assets/images/genshin5.jpg",
-          "assets/images/genshin6.jpg",
-          "assets/images/genshin7.jpg",
-          "assets/images/genshin8.jpg",
-          "assets/images/genshin9.png",
-          "assets/images/genshin10.jpg",
-          "assets/images/genshin11.jpg",
-          "assets/images/genshin12.jpg",
+          "genshin1.jpg",
+          "genshin2.jpg",
+          "genshin3.jpg",
+          "genshin4.jpg",
+          "genshin5.jpg",
+          "genshin6.jpg",
+          "genshin7.jpg",
+          "genshin8.jpg",
+          "genshin9.png",
+          "genshin10.jpg",
+          "genshin11.jpg",
+          "genshin12.jpg",
+          "genshin17.jpg",
+          "genshin18.jpg",
+          "genshin19.jpg",
+          "genshin20.jpg",
+          "genshin21.jpg",
+          "genshin22.jpg",
         ],
         groupName: 'Genshin Impact',
         urlGroups: [
           {
             url: 'https://old.reddit.com/r/genshin_impact/',
-            urlName: 'Main Reddit',
+            urlName: 'Reddit',
             backgroundColor: Colors.red(1),
           },
           {
@@ -249,13 +255,18 @@ export const STARTPAGE: StartPageLinks[] = [
             backgroundColor: Colors.teal(2),
           },
           {
+            url: 'https://docs.google.com/spreadsheets/d/1a--WPcWT7BOtw5J9TwJoRHEg_BAeT1mhAR0Fvdn_SZI/edit#gid=1083989494',
+            urlName: 'Builds',
+            backgroundColor: Colors.indigo(1)
+          },
+          {
             url: 'https://docs.google.com/spreadsheets/d/1a--WPcWT7BOtw5J9TwJoRHEg_BAeT1mhAR0Fvdn_SZI/edit?usp=sharing',
             urlName: 'Google Doc',
             backgroundColor: Colors.light_blue(2)
           },
           {
             url: 'https://genshin.honeyhunterworld.com/',
-            urlName: 'Daily Mat',
+            urlName: 'Database',
           },
           {
             url: 'https://spiral-abyss.appsample.com/',
@@ -269,12 +280,12 @@ export const STARTPAGE: StartPageLinks[] = [
       },
       {
         media: [
-          "assets/images/league_of_legends1.jpg",
-          "assets/images/league_of_legends2.jpg",
-          "assets/images/league_of_legends3.jpg",
-          "assets/images/league_of_legends4.jpg",
-          "assets/images/league_of_legends5.png",
-          "assets/images/league_of_legends6.png",
+          "league_of_legends1.jpg",
+          "league_of_legends2.jpg",
+          "league_of_legends3.jpg",
+          "league_of_legends4.jpg",
+          "league_of_legends5.png",
+          "league_of_legends6.png",
         ],
         groupName: 'League of Legends',
         urlGroups: [
@@ -303,13 +314,13 @@ export const STARTPAGE: StartPageLinks[] = [
     linkGroups: [
       {
         media: [
-          "assets/images/gfl1.png",
-          "assets/images/gfl2.png",
-          "assets/images/gfl3.png",
-          "assets/images/gfl4.png",
-          "assets/images/gfl6.png",
-          "assets/images/gfl7.png",
-          "assets/images/gfl8.png",
+          "gfl1.png",
+          "gfl2.png",
+          "gfl3.png",
+          "gfl4.png",
+          "gfl6.png",
+          "gfl7.png",
+          "gfl8.png",
         ],
         groupName: 'Girls\' Frontline',
         urlGroups: [
@@ -385,7 +396,7 @@ export const STARTPAGE: StartPageLinks[] = [
             urlName: 'T-Doll Recipe DB',
           },
           {
-            url: 'https://docs.google.com/document/d/1nRRyH9IH7dg7BRow8Y_hh2bNAlLxtpRB6cr_kzl_5NE/edit#',
+            url: 'https://docs.google.com/document/d/1-ETBAG_AfsIrEURvd5fXnmxHD02urvUuVcOQVCIqa6c/edit#heading=h.9bln0wx8twyq',
             urlName: 'Next Ranking',
             backgroundColor: Colors.indigo(2),
           },
@@ -393,21 +404,21 @@ export const STARTPAGE: StartPageLinks[] = [
       },
       {
         media: [
-          "assets/images/fgo3.jpg",
-          "assets/images/fgo4.png",
-          "assets/images/fgo5.jpg",
-          "assets/images/fgo6.png",
-          "assets/images/fgo7.png",
-          "assets/images/fgo8.png",
-          "assets/images/fgo9.jpg",
-          "assets/images/fgo10.png",
-          "assets/images/fgo11.png",
-          "assets/images/fgo12.jpg",
-          "assets/images/fgo13.png",
-          "assets/images/fgo14.png",
-          "assets/images/fgo15.png",
-          "assets/images/fgo16.jpg",
-          "assets/images/fgo17.png",
+          "fgo3.jpg",
+          "fgo4.png",
+          "fgo5.jpg",
+          "fgo6.png",
+          "fgo7.png",
+          "fgo8.png",
+          "fgo9.jpg",
+          "fgo10.png",
+          "fgo11.png",
+          "fgo12.jpg",
+          "fgo13.png",
+          "fgo14.png",
+          "fgo15.png",
+          "fgo16.jpg",
+          "fgo17.png",
         ],
         groupName: 'Fate Grand Order',
         urlGroups: [
@@ -438,15 +449,15 @@ export const STARTPAGE: StartPageLinks[] = [
       },
       {
         media: [
-          "assets/images/pricone1.jpg",
-          "assets/images/pricone2.jpg",
-          "assets/images/pricone3.jpg",
-          "assets/images/pricone4.jpg",
-          "assets/images/pricone5.jpg",
-          "assets/images/pricone6.jpg",
-          "assets/images/pricone7.png",
-          "assets/images/pricone9.jpg",
-          "assets/images/pricone10.jpg",
+          "pricone1.jpg",
+          "pricone2.jpg",
+          "pricone3.jpg",
+          "pricone4.jpg",
+          "pricone5.jpg",
+          "pricone6.jpg",
+          "pricone7.png",
+          "pricone9.jpg",
+          "pricone10.jpg",
         ],
         groupName: 'Princess Connect',
         urlGroups: [
@@ -457,6 +468,11 @@ export const STARTPAGE: StartPageLinks[] = [
           {
             url: 'https://docs.google.com/spreadsheets/d/1b3Vjcc-wfrVfoqI93OMGLZPrJaxpclnBAerPXZdAfc0/edit#gid=57366839',
             urlName: 'Tier/Guides',
+          },
+          {
+            url: 'https://pcrdfans.com/en/battle',
+            urlName: 'PvP',
+            backgroundColor: Colors.indigo(2)
           },
           {
             url: "https://docs.google.com/spreadsheets/d/18VjvDwBrTinuWtqbxUxo0BNOvFpmztFO2p2D03tUxdA/edit#gid=1114939808",
@@ -472,17 +488,16 @@ export const STARTPAGE: StartPageLinks[] = [
       },
       {
         media: [
-          "assets/images/konosuba1.png",
-          "assets/images/konosuba2.png",
-          "assets/images/konosuba3.jpg",
-          "assets/images/konosuba4.jpg",
-          "assets/images/konosuba5.jpg",
-          "assets/images/konosuba6.png",
-          "assets/images/konosuba7.jpg",
-          "assets/images/konosuba8.png",
-          "assets/images/konosuba9.jpg",
-          "assets/images/konosuba10.png",
-          "assets/images/konosuba11.jpg",
+          "konosuba1.png",
+          "konosuba2.png",
+          "konosuba3.jpg",
+          "konosuba5.jpg",
+          "konosuba6.png",
+          "konosuba7.jpg",
+          "konosuba8.png",
+          "konosuba9.jpg",
+          "konosuba10.png",
+          "konosuba11.jpg",
         ],
         groupName: 'Konosuba',
         urlGroups: [
@@ -498,10 +513,53 @@ export const STARTPAGE: StartPageLinks[] = [
       },
       {
         media: [
-          "assets/images/wallhaven-z8zjdo.jpg",
-          "assets/images/wallhaven-z8qldy.jpg",
-          "assets/images/wallhaven-z8q59j.jpg",
-          "assets/images/wallhaven-z8p1jy.jpg",
+          "wallhaven-575r67.jpg",
+        ],
+        groupName: 'Epic Seven',
+        urlGroups: [
+          {
+            url: 'https://old.reddit.com/r/EpicSeven/',
+            urlName: 'Reddit',
+            backgroundColor: Colors.red(1)
+          },
+          {
+            url: 'https://docs.google.com/document/d/1ZQFAPU5y5BVbLgWdkegOnkcil4bZOUINdjCmTHaNuH0/edit',
+            urlName: 'New Player',
+          },
+          {
+            url: 'https://docs.google.com/presentation/d/1hFz8lTVCNdv8wUE1qbUYKd42iQMCesLpeFgNxmJ3zfc/preview#slide=id.g4e4c6ec9ea_0_145',
+            urlName: 'Raid',
+          },
+          {
+            url: 'https://yufine.co/',
+            urlName: 'Progression Guides',
+            backgroundColor: Colors.light_blue(2)
+          },
+          {
+            url: "https://docs.google.com/spreadsheets/d/13hICKTgrwaND_fVXSS7uWOUA_USBGFrsRJBa7GpOSD4/edit#gid=0",
+            urlName: "Wyvern 13",
+          },
+          {
+            url: "https://epic7x.com/tier-list/",
+            urlName: "Tier",
+            backgroundColor: Colors.red(2)
+          },
+          {
+            url: "https://e7herder.com/tools/model-viewer",
+            urlName: "Model Viewer",
+          },
+          {
+            url: 'https://epicsevendb.com/',
+            urlName: 'Database',
+          },
+        ],
+      },
+      {
+        media: [
+          "wallhaven-z8zjdo.jpg",
+          "wallhaven-z8qldy.jpg",
+          "wallhaven-z8q59j.jpg",
+          "wallhaven-z8p1jy.jpg",
         ],
         groupName: 'Misc',
         urlGroups: [
@@ -518,4 +576,39 @@ export const STARTPAGE: StartPageLinks[] = [
       },       
     ],
   },
+  {
+    tabName: "",
+    linkGroups: [
+      {
+        media: [
+          "wallhaven-v9oejp.jpg",
+        ],
+        groupName: 'Magicami',
+        urlGroups: [
+          {
+            url: "https://old.reddit.com/r/magicami/",
+            urlName: "Reddit",
+            backgroundColor: Colors.red(1)
+          },
+          {
+            url: "https://docs.google.com/document/d/11-Bml0nbBUMw9sCQDAAwfyb_ve3kCvqvKmJEuP5N2-Q/edit#heading=h.8k3xvzzgexj1",
+            urlName: "Beginner's Guide",
+            backgroundColor: Colors.light_blue(2)
+          },
+          {
+            url: "https://appmedia.jp/magicami/3948385",
+            urlName: "JP wiki",
+          },
+          {
+            url: "https://eight04.github.io/mgcm-skill-data/",
+            urlName: "Damage Simulation",
+          },
+          {
+            url: "https://docs.google.com/document/d/e/2PACX-1vTosG4UlrZ_2zsunGSb8tIpfYDH3bcuUO-fPq00GSZfftPI825k-jX500gOWP4084nECChjd9uOqFda/pub",
+            urlName: "Strat Guide",
+          },
+        ],
+      },
+    ]
+  },    
 ];
