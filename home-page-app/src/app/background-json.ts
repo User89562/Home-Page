@@ -12,7 +12,7 @@ export interface MediaType {
     h?: string[];
 }
 
-/**
+/** TODO: add more backgrounds for other tabs
  * 0 = default
  * # = tab index to have different background
  */

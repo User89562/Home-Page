@@ -17,7 +17,7 @@ export interface UrlGroup {
   urlName: string;
   backgroundColor?: string;
 }
-
+//TODO: restructure 'media' to be similar to background media
 export const STARTPAGE: StartPageLinks[] = [
   {
     tabName: "Home",
@@ -255,7 +255,7 @@ export const STARTPAGE: StartPageLinks[] = [
             backgroundColor: Colors.teal(2),
           },
           {
-            url: 'https://docs.google.com/spreadsheets/d/1a--WPcWT7BOtw5J9TwJoRHEg_BAeT1mhAR0Fvdn_SZI/edit#gid=1083989494',
+            url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRq-sQxkvdbvaJtQAGG6iVz2q2UN9FCKZ8Mkyis87QHFptcOU3ViLh0_PJyMxFSgwJZrd10kbYpQFl1/pubhtml#',
             urlName: 'Builds',
             backgroundColor: Colors.indigo(1)
           },
@@ -488,32 +488,12 @@ export const STARTPAGE: StartPageLinks[] = [
       },
       {
         media: [
-          "konosuba1.png",
-          "konosuba2.png",
-          "konosuba3.jpg",
-          "konosuba5.jpg",
-          "konosuba6.png",
-          "konosuba7.jpg",
-          "konosuba8.png",
-          "konosuba9.jpg",
-          "konosuba10.png",
-          "konosuba11.jpg",
-        ],
-        groupName: 'Konosuba',
-        urlGroups: [
-          {
-            url: 'https://old.reddit.com/r/FantasticDays/',
-            urlName: 'Reddit',
-          },
-          {
-            url: 'https://konosuba.fandom.com/wiki/Konosuba:_Fantastic_Days',
-            urlName: 'Wiki',
-          },
-        ],
-      },
-      {
-        media: [
-          "wallhaven-575r67.jpg",
+          "e7-1.png",
+          "e7-3.jpg",
+          "e7-4.jpg",
+          "e7-5.jpg",
+          "e7-7.jpg",
+          "e7-8.jpg",
         ],
         groupName: 'Epic Seven',
         urlGroups: [
@@ -534,10 +514,6 @@ export const STARTPAGE: StartPageLinks[] = [
             url: 'https://yufine.co/',
             urlName: 'Progression Guides',
             backgroundColor: Colors.light_blue(2)
-          },
-          {
-            url: "https://docs.google.com/spreadsheets/d/13hICKTgrwaND_fVXSS7uWOUA_USBGFrsRJBa7GpOSD4/edit#gid=0",
-            urlName: "Wyvern 13",
           },
           {
             url: "https://epic7x.com/tier-list/",

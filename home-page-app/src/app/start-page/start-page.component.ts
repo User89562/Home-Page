@@ -69,7 +69,6 @@ export class StartPageComponent implements OnInit {
 
   }
 
-  //TODO: setup json based on tab selection to give a random # back
   tabChanged(event: number) {
     this.selectedTabIndex = event;
     this.chosenBackground = this.backgroundUtils.retrieveBackgroundImage(this.localSettings.backgroundType, this.selectedTabIndex);
