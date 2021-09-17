@@ -491,7 +491,7 @@ export const STARTPAGE: StartPageLinks[] = [
           "e7-1.png",
           "e7-3.jpg",
           "e7-4.jpg",
-          "e7-5.jpg",
+          "e7-5.png",
           "e7-7.jpg",
           "e7-8.jpg",
         ],
@@ -582,6 +582,54 @@ export const STARTPAGE: StartPageLinks[] = [
           {
             url: "https://docs.google.com/document/d/e/2PACX-1vTosG4UlrZ_2zsunGSb8tIpfYDH3bcuUO-fPq00GSZfftPI825k-jX500gOWP4084nECChjd9uOqFda/pub",
             urlName: "Strat Guide",
+          },
+        ],
+      },
+      {
+        media: [
+          "al/al-2.png",
+          "al/al-4.png",
+          "al/al-6.png",
+          "al/al-8.png",
+          "al/al-9.png",
+          "al/al-10.png",
+          "al/al-11.png",
+          "al/al-12.png",
+          "al/al-13.png",
+          "al/al-15.png",
+          "al/al-16.png",
+          "al/al-23.png",
+          "al/al-24.png",
+          "al/al-25.png",
+          "al/al-26.png",
+          "al/al-27.png",
+          "al/al-28.png",
+          "al/al-29.png",
+          "al/al-30.png",
+          "al/al-33.png",
+          "al/al-36.png",
+          "al/al-38.png",
+          "al/al-41.png",
+          "al/al-42.png",
+          "al/al-43.png",
+          "al/al-44.png",
+        ],
+        groupName: 'Azur Lane',
+        urlGroups: [
+          {
+            url: 'https://old.reddit.com/r/AzureLane/',
+            urlName: 'Reddit',
+            backgroundColor: Colors.red(1)
+          },
+          {
+            url: 'https://azurlane.koumakan.jp/Azur_Lane_Wiki',
+            urlName: 'Wiki',
+            backgroundColor: Colors.purple(0)
+          },
+          {
+            url: 'https://slaimuda.github.io/ectl/#/home',
+            urlName: 'Tier List',
+            backgroundColor: Colors.light_blue(1)
           },
         ],
       },
