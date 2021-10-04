@@ -339,10 +339,6 @@ export const STARTPAGE: StartPageLinks[] = [
             backgroundColor: Colors.light_blue(2)
           },
           {
-            url: 'https://www.gflcorner.com/',
-            urlName: 'GFL Corner',
-          },
-          {
             url: 'https://gfl.matsuda.tips/blog/',
             urlName: 'Angry Midget',
           },
@@ -357,10 +353,12 @@ export const STARTPAGE: StartPageLinks[] = [
           {
             url: 'https://docs.google.com/spreadsheets/d/1MKEvSx9zcgvWnRhv9IoL_-XUuHOq5ESFCSlJkxuE6OU/edit#gid=0',
             urlName: 'Armory',
+            backgroundColor: Colors.light_blue(1)
           },
           {
             url: 'https://docs.google.com/spreadsheets/d/1iA07L2CvAgJkbRFvUGQToyO9RrZjJnNyAAtpKDD-Dvc/edit?usp=sharing',
             urlName: 'Ranking Diary',
+            backgroundColor: Colors.light_blue(1)
           },
           {
             url: 'https://aaeeschylus.github.io/main.html',
@@ -369,14 +367,6 @@ export const STARTPAGE: StartPageLinks[] = [
           {
             url: 'https://gfgfork.github.io/gf/main.html',
             urlName: 'Logistics Calculator',
-          },
-          {
-            url: 'https://hycdes.com/pages/GFT_Echelon-EN.html',
-            urlName: 'Damage Simulation',
-          },
-          {
-            url: 'https://hycdes.com/pages/GFT_ChipCal-EN.html',
-            urlName: 'Chip Calculator',
           },
           {
             url: 'https://docs.google.com/spreadsheets/d/10LJdksnM3zipOb72IneJD7WVp3765JYJEGg0LnodzDI/edit#gid=516072763',
@@ -390,10 +380,6 @@ export const STARTPAGE: StartPageLinks[] = [
           {
             url: 'https://docs.google.com/spreadsheets/d/1TjHC4Vaed8dFqSkagM6teNlmBjFGPiUbTRnTnvxnnu4/edit#gid=296924292',
             urlName: 'Boss Strategies',
-          },
-          {
-            url: 'https://sangvis.science/list/all',
-            urlName: 'T-Doll Recipe DB',
           },
           {
             url: 'https://docs.google.com/document/d/1-ETBAG_AfsIrEURvd5fXnmxHD02urvUuVcOQVCIqa6c/edit#heading=h.9bln0wx8twyq',
@@ -509,6 +495,10 @@ export const STARTPAGE: StartPageLinks[] = [
           {
             url: 'https://docs.google.com/presentation/d/1hFz8lTVCNdv8wUE1qbUYKd42iQMCesLpeFgNxmJ3zfc/preview#slide=id.g4e4c6ec9ea_0_145',
             urlName: 'Raid',
+          },
+          {
+            url: "https://www.epic7stats.com",
+            urlName: "Pvp DB",
           },
           {
             url: 'https://yufine.co/',
