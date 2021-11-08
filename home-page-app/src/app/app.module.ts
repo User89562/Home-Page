@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BackgroundRendererComponent } from './background-renderer/background-renderer.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [	

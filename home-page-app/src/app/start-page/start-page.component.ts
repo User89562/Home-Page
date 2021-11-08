@@ -1,7 +1,7 @@
 import { BackgroundUtil, MediaLink } from './../utils/background-util';
 import {Component, HostListener, OnInit } from '@angular/core';
-import { BackgroundMedia, BACKGROUND_MEDIA } from '../background-json';
 import { STARTPAGE, StartPageLinks } from '../start-page-json';
+import json_data from '../images.json'
 
 class LocalStorageSettings {
   constructor(
@@ -25,29 +25,37 @@ export class StartPageComponent implements OnInit {
   selectedTabIndex = 0;
   localSettings!: LocalStorageSettings;
   backgroundUtils = new BackgroundUtil();
+  jsonImages: any = json_data;
+  jsonKeys = Object.keys(json_data);
 
   constructor() { }
 
   ngOnInit() {
-    //set shit in localstorage if there isn't anything there
+    //set stuff in localstorage if there isn't anything there
     if (!localStorage.getItem(this.localStorageName)) { 
       //set default options
       localStorage.setItem(this.localStorageName, JSON.stringify(new LocalStorageSettings('visible','d')));
     } 
-      
+    //retrieve info from local storage
     this.localSettings = JSON.parse(localStorage.getItem(this.localStorageName) || '');
+
  
     this.visibility = this.localSettings.visibility;
-    this.chosenBackground = this.backgroundUtils.retrieveBackgroundImage(this.localSettings.backgroundType, 0);
-    console.log(this.chosenBackground.link);
 
-
+    this.chosenBackground = this.backgroundUtils.retrieveBackgroundImage(this.localSettings.backgroundType, 0, this.jsonImages, this.jsonKeys);
     this.startPageLinks = STARTPAGE;
-    
 
     this.startPageLinks.forEach(startPageLink => {
       startPageLink.linkGroups.forEach(linkGroup => {
-        linkGroup.selectedMedia = linkGroup.media![this.randomNumber(linkGroup.media?.length!)];
+          if (this.jsonKeys.includes(linkGroup.jsonKey)){
+            const linkGroupImages = this.jsonImages[linkGroup.jsonKey]
+            if (linkGroup.jsonKey == 'root') {
+              linkGroup.selectedMedia = linkGroupImages![this.randomNumber(linkGroupImages?.length!)];
+            } else {
+              linkGroup.selectedMedia = linkGroup.jsonKey + '/' +linkGroupImages![this.randomNumber(linkGroupImages?.length!)];
+            }
+            
+          }        
       });
     });    
   }
@@ -69,9 +77,11 @@ export class StartPageComponent implements OnInit {
 
   }
 
+  
+
   tabChanged(event: number) {
     this.selectedTabIndex = event;
-    this.chosenBackground = this.backgroundUtils.retrieveBackgroundImage(this.localSettings.backgroundType, this.selectedTabIndex);
+    this.chosenBackground = this.backgroundUtils.retrieveBackgroundImage(this.localSettings.backgroundType, this.selectedTabIndex, this.jsonImages, this.jsonKeys);
   }
 
   @HostListener('window:keydown', ['$event'])

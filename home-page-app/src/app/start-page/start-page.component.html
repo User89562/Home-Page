@@ -1,45 +1,113 @@
-<div  class="background-container">
-    <app-background-renderer [media]="chosenBackground.link" [mediaType]="chosenBackground.type"></app-background-renderer>
-    <mat-tab-group animationDuration="0ms" [selectedIndex]="selectedTabIndex" (selectedIndexChange)="tabChanged($event)">
-        <mat-tab *ngFor="let page of startPageLinks" [label]='page.tabName'  >
-            <ng-template matTabContent>
-                <div fxLayout="column wrap" fxLayoutAlign="space-evenly center" class="page-group-container" [ngStyle]="{visibility: visibility}">
-                    <mat-card *ngFor="let linkGroup of page.linkGroups" fxLayoutAlign="center">
-                        <div fxFlexFill fxLayoutAlign="center center" >
-                            <img mat-card-image [src]=" assetsPath +linkGroup.selectedMedia">
-                            <h1 class="group-name">{{linkGroup?.groupName}}</h1>
-                            <div class="content-container"  fxLayout="row wrap" fxFlexFill fxLayoutAlign="center center">
-                                <div *ngFor="let urlGroup of linkGroup.urlGroups" class="url-group-container" fxLayout="column wrap" >
-                                    <div class="url-container" >
-                                        <a mat-stroked-button href="{{urlGroup.url}}" [ngStyle]="{'background-color': urlGroup.backgroundColor ? urlGroup?.backgroundColor : 'rgba(245, 222, 179)' }">
-                                            {{urlGroup.urlName}}
-                                        </a> 
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </mat-card>
+<div class="background-container">
+  <app-background-renderer
+    [media]="chosenBackground.link"
+    [mediaType]="chosenBackground.type"
+  ></app-background-renderer>
+  <mat-tab-group
+    animationDuration="0ms"
+    [selectedIndex]="selectedTabIndex"
+    (selectedIndexChange)="tabChanged($event)"
+  >
+    <mat-tab *ngFor="let page of startPageLinks" [label]="page.tabName">
+      <ng-template matTabContent>
+        <div
+          fxLayout="row wrap"
+          fxLayoutAlign="space-evenly center"
+          class="page-group-container"
+          [ngStyle]="{ visibility: visibility }"
+        >
+          <mat-card
+            *ngFor="let linkGroup of page.linkGroups"
+            fxLayoutAlign="center"
+          >
+            <div fxFlexFill fxLayoutAlign="center center">
+              <img
+                mat-card-image
+                [src]="assetsPath + linkGroup.selectedMedia"
+              />
+              <h1 class="group-name">{{ linkGroup?.groupName }}</h1>
+              <div
+                class="content-container"
+                fxLayout="row wrap"
+                fxFlexFill
+                fxLayoutAlign="center center"
+              >
+                <div
+                  *ngFor="let urlGroup of linkGroup.urlGroups"
+                  class="url-group-container"
+                  fxLayout="column wrap"
+                >
+                  <div
+                    class="url-container"
+                    *ngIf="urlGroup.type == 'link'; else menuGroup"
+                  >
+                    <a
+                      class="url-link"
+                      mat-stroked-button
+                      href="{{ urlGroup.urls[0].url }}"
+                      [ngStyle]="{
+                        'background-color': urlGroup.backgroundColor
+                          ? urlGroup?.backgroundColor
+                          : 'rgba(245, 222, 179)'
+                      }"
+                    >
+                      {{ urlGroup.urls[0].name }}
+                    </a>
+                  </div>
+                  <ng-template #menuGroup>
+                    <div class="url-container">
+                      <button
+                        class="menu-button"
+                        mat-stroked-button
+                        [matMenuTriggerFor]="urlMenu"
+                        [ngStyle]="{
+                          'background-color': urlGroup.backgroundColor
+                            ? urlGroup?.backgroundColor
+                            : 'rgba(245, 222, 179)'
+                        }"
+                      >
+                        {{ urlGroup.menuName }}
+                      </button>
+                      <mat-menu #urlMenu="matMenu" class="menu-container">
+                        <a
+                          mat-menu-item
+                          class="menu-link"
+                          *ngFor="let url of urlGroup.urls"
+                          href="{{ url.url }}"
+                        >
+                          {{ url.name }}
+                        </a>
+                      </mat-menu>
+                    </div>
+                  </ng-template>
                 </div>
-            </ng-template>   
-        </mat-tab>
-    </mat-tab-group>
-    <button mat-icon-button aria-label="Settings icon button" class="settings-button" [matMenuTriggerFor]="menu">
-        <mat-icon>settings</mat-icon>
+              </div>
+            </div>
+          </mat-card>
+        </div>
+      </ng-template>
+    </mat-tab>
+  </mat-tab-group>
+  <button
+    mat-icon-button
+    aria-label="Settings icon button"
+    class="settings-button"
+    [matMenuTriggerFor]="menu"
+  >
+    <mat-icon>settings</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu" yPosition="above" xPosition="before">
+    <button mat-menu-item (click)="toggleVisibility()">
+      <mat-icon>visibility</mat-icon>
+      <span>Show/Hide</span>
     </button>
-    <mat-menu #menu="matMenu" yPosition="above" xPosition="before">
-        <button mat-menu-item (click)="toggleVisibility()">
-          <mat-icon>visibility</mat-icon>
-          <span>Show/Hide</span>
-        </button>
-        <button mat-menu-item>
-          <mat-icon>video_label</mat-icon>
-          <span>Pause/Play</span>
-        </button>
-        <button mat-menu-item (click)="toggleBackgroundType()">
-          <mat-icon>privacy_tip</mat-icon>
-          <span>NSFW</span>
-        </button>
-      </mat-menu>
+    <button mat-menu-item>
+      <mat-icon>video_label</mat-icon>
+      <span>Pause/Play</span>
+    </button>
+    <button mat-menu-item (click)="toggleBackgroundType()">
+      <mat-icon>privacy_tip</mat-icon>
+      <span>NSFW</span>
+    </button>
+  </mat-menu>
 </div>
-
-

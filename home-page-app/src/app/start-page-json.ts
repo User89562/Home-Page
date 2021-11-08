@@ -1,4 +1,4 @@
-import { Colors } from './colors';
+import { Colors } from "./colors";
 
 export interface StartPageLinks {
   tabName: string;
@@ -6,16 +6,22 @@ export interface StartPageLinks {
 }
 
 export interface LinkGroup {
-  media?: string[];
+  jsonKey: string;
   selectedMedia?: string;
   groupName?: string;
   urlGroups: UrlGroup[];
 }
-
+//todo: add type + make url+urlName into an obj and an array
 export interface UrlGroup {
-  url: string;
-  urlName: string;
+  urls: Url[];
+  type: string;
+  menuName?: string;
   backgroundColor?: string;
+}
+
+export interface Url {
+  url: string;
+  name: string;
 }
 //TODO: restructure 'media' to be similar to background media
 export const STARTPAGE: StartPageLinks[] = [
@@ -23,107 +29,98 @@ export const STARTPAGE: StartPageLinks[] = [
     tabName: "Home",
     linkGroups: [
       {
-        media: [
-          "pbm3yulltvn51.jpg",
-          "wallhaven-6omxxl.jpg",
-          "wallhaven-3z369y.jpg",
-          "wallhaven-6omo76.jpg",
-        ],
+        jsonKey: "root",
         urlGroups: [
           {
-            url: "https://old.reddit.com/",
-            urlName: "Reddit",
+            urls: [{ url: "https://old.reddit.com/", name: "Reddit" }],
+            type: "link",
             backgroundColor: Colors.red(1),
           },
           {
-            url: "https://www.livechart.me/schedule/tv",
-            urlName: "Anime Season",
+            urls: [
+              {
+                url: "https://www.livechart.me/schedule/tv",
+                name: "Anime Season",
+              },
+            ],
+            type: "link",
           },
           {
-            url: "https://twitter.com/",
-            urlName: "Twitter",
+            urls: [{ url: "https://twitter.com/", name: "Twitter" }],
+            type: "link",
           },
           {
-            url: "https://www.google.com/gmail/",
-            urlName: "Gmail",
+            urls: [{ url: "https://www.google.com/gmail/", name: "Gmail" }],
+            type: "link",
           },
           {
-            url: "https://discord.com/login",
-            urlName: "Discord",
-            backgroundColor: Colors.teal(1)
+            urls: [{ url: "https://discord.com/login", name: "Discord" }],
+            type: "link",
+            backgroundColor: Colors.teal(1),
           },
           {
-            url: "https://www.virustotal.com/gui/",
-            urlName: "Virus Total",
+            urls: [
+              { url: "https://www.virustotal.com/gui/", name: "Virus Total" },
+            ],
+            type: "link",
           },
         ],
       },
       {
-        media: [
-          "wallhaven-575r67.jpg",
-          "wallhaven-28dro6.jpg",
-          "wallhaven-28zr39.jpg",
-          "wallhaven-72j8jo.jpg",
-        ],
+        jsonKey: "root",
         urlGroups: [
           {
-            url: "https://www.twitch.tv/directory/all",
-            urlName: "Twitch",
+            urls: [
+              { url: "https://www.twitch.tv/directory/all", name: "Twitch" },
+            ],
+            type: "link",
             backgroundColor: Colors.purple(1),
           },
           {
-            url: "https://www.youtube.com/",
-            urlName: "Youtube",
+            urls: [{ url: "https://www.youtube.com/", name: "Youtube" }],
+            type: "link",
           },
           {
-            url: "https://open.spotify.com/",
-            urlName: "Spotify",
+            urls: [{ url: "https://open.spotify.com/", name: "Spotify" }],
+            type: "link",
             backgroundColor: Colors.green(2),
           },
         ],
       },
       {
-        media: [
-          "wallhaven-l3zxvl.jpg",
-          "wallhaven-g75dq3.jpg",
-          "wallhaven-j3wq5p.jpg",
-          "wallhaven-j3wqd5.jpg",
-        ],
+        jsonKey: "root",
         urlGroups: [
           {
-            url: "https://www.amazon.ca/",
-            urlName: "Amazon",
+            urls: [{ url: "https://www.amazon.ca/", name: "Amazon" }],
+            type: "link",
           },
           {
-            url: "https://www.humblebundle.com/",
-            urlName: "Humble Bundle",
+            urls: [
+              { url: "https://www.humblebundle.com/", name: "Humble Bundle" },
+            ],
+            type: "link",
           },
           {
-            url: "https://www.rtings.com/",
-            urlName: "Reviews",
+            urls: [{ url: "https://www.rtings.com/", name: "Reviews" }],
+            type: "link",
           },
         ],
       },
       {
-        media: [
-          "wallhaven-m91x28.jpg",
-          "wallhaven-m9zovy.jpg",
-          "wallhaven-l3z9rp.jpg",
-          "wallhaven-k71rzd.jpg",
-        ],
+        jsonKey: "root",
         urlGroups: [
           {
-            url: "http://192.168.1.15:8090",
-            urlName: "Downloader",
-            backgroundColor: Colors.indigo(1)
+            urls: [{ url: "http://192.168.1.15:8090", name: "Downloader" }],
+            type: "link",
+            backgroundColor: Colors.indigo(1),
           },
           {
-            url: "https://github.com/login",
-            urlName: "Github",
+            urls: [{ url: "https://github.com/login", name: "Github" }],
+            type: "link",
           },
           {
-            url: "http://192.168.1.15:8081",
-            urlName: "Git Lab",
+            urls: [{ url: "http://192.168.1.15:8081", name: "Git Lab" }],
+            type: "link",
           },
         ],
       },
@@ -133,57 +130,57 @@ export const STARTPAGE: StartPageLinks[] = [
     tabName: "Developer",
     linkGroups: [
       {
-        media: [
-          "wallhaven-g7532l.jpg",
-          "wallhaven-v9oejp.jpg",
-          "wallhaven-x8z3qo.jpg",
-          "wallhaven-wq1wlr.jpg",
-        ],
-        groupName: 'Angular',
+        jsonKey: "root",
+        groupName: "Angular",
         urlGroups: [
           {
-            url: "https://angular.io/start",
-            urlName: "Angular Wiki",
+            urls: [{ url: "https://angular.io/start", name: "Angular Wiki" }],
+            type: "link",
           },
           {
-            url: "https://material.angular.io/components/categories",
-            urlName: "Material",
+            urls: [
+              {
+                url: "https://material.angular.io/components/categories",
+                name: "Material",
+              },
+            ],
+            type: "link",
           },
           {
-            url: "https://material.io/resources/icons/?style=baseline",
-            urlName: "Angular Icons",
+            urls: [
+              {
+                url: "https://material.io/resources/icons/?style=baseline",
+                name: "Angular Icons",
+              },
+            ],
+            type: "link",
           },
         ],
       },
       {
-        media: [
-          "wallhaven-o3gz57.jpg",
-          "wallhaven-o3ym1p.jpg",
-          "wallhaven-pkl5pm.jpg",
-          "wallhaven-pkwq73.jpg",
-        ],
+        jsonKey: "root",
         urlGroups: [
           {
-            url: "https://material.io/resources/color/#!/?view.left=0&view.right=0",
-            urlName: "Color Picker",
+            urls: [
+              {
+                url: "https://material.io/resources/color/#!/?view.left=0&view.right=0",
+                name: "Color Picker",
+              },
+            ],
+            type: "link",
           },
           {
-            url: "https://regexr.com/",
-            urlName: "Regex Tester",
+            urls: [{ url: "https://regexr.com/", name: "Regex Tester" }],
+            type: "link",
           },
         ],
       },
       {
-        media: [
-          "wallhaven-e78kjw.jpg",
-          "wallhaven-e79j6o.jpg",
-          "wallhaven-e79om8.jpg",
-          "wallhaven-dpkyqj.jpg",
-        ],
+        jsonKey: "root",
         urlGroups: [
           {
-            url: "https://kenney.nl/assets",
-            urlName: "2-D Assets",
+            urls: [{ url: "https://kenney.nl/assets", name: "2-D Assets" }],
+            type: "link",
           },
         ],
       },
@@ -193,436 +190,570 @@ export const STARTPAGE: StartPageLinks[] = [
     tabName: "PC",
     linkGroups: [
       {
-        media: [
-          "920126.jpg",
-          "555246.jpg",
-          "920116.jpg",
-          "920117.jpg",
-          "920122.jpg",
-          "920131.jpg",
-        ],
-        groupName: 'Lost Ark',
+        jsonKey: "lostark",
+        groupName: "Lost Ark",
         urlGroups: [
           {
-            url: 'https://old.reddit.com/r/lostarkgame/',
-            urlName: 'Reddit',
+            urls: [
+              { url: "https://old.reddit.com/r/lostarkgame/", name: "Reddit" },
+            ],
+            type: "link",
           },
           {
-            url: 'https://lostarkdatabase.com/wiki/index.php?title=Main_Page',
-            urlName: 'Wiki',
+            urls: [
+              {
+                url: "https://lostarkdatabase.com/wiki/index.php?title=Main_Page",
+                name: "Wiki",
+              },
+            ],
+            type: "link",
           },
           {
-            url: 'https://lostarkhub.com/',
-            urlName: 'News',
+            urls: [{ url: "https://lostarkhub.com/", name: "News" }],
+            type: "link",
           },
         ],
       },
       {
-        media: [
-          "genshin1.jpg",
-          "genshin2.jpg",
-          "genshin3.jpg",
-          "genshin4.jpg",
-          "genshin5.jpg",
-          "genshin6.jpg",
-          "genshin7.jpg",
-          "genshin8.jpg",
-          "genshin9.png",
-          "genshin10.jpg",
-          "genshin11.jpg",
-          "genshin12.jpg",
-          "genshin17.jpg",
-          "genshin18.jpg",
-          "genshin19.jpg",
-          "genshin20.jpg",
-          "genshin21.jpg",
-          "genshin22.jpg",
-        ],
-        groupName: 'Genshin Impact',
+        jsonKey: "genshin",
+        groupName: "Genshin Impact",
         urlGroups: [
           {
-            url: 'https://old.reddit.com/r/genshin_impact/',
-            urlName: 'Reddit',
+            urls: [
+              {
+                url: "https://old.reddit.com/r/genshin_impact/",
+                name: "Reddit",
+              },
+            ],
+            type: "link",
             backgroundColor: Colors.red(1),
           },
           {
-            url: 'https://old.reddit.com/r/genshin_impact_leaks/',
-            urlName: 'Leaks Reddit',
+            urls: [
+              {
+                url: "https://old.reddit.com/r/genshin_impact_leaks/",
+                name: "Leaks Reddit",
+              },
+            ],
+            type: "link",
           },
           {
-            url: 'https://webstatic-sea.mihoyo.com/app/ys-map-sea/?lang=en-us#/map/2?shown_types=2,3,154&center=2747.00,786.00&zoom=-3.00',
-            urlName: 'Map',
+            urls: [
+              {
+                url: "https://webstatic-sea.mihoyo.com/app/ys-map-sea/?lang=en-us#/map/2?shown_types=2,3,154&center=2747.00,786.00&zoom=-3.00",
+                name: "Map",
+              },
+            ],
+            type: "link",
             backgroundColor: Colors.teal(2),
           },
           {
-            url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRq-sQxkvdbvaJtQAGG6iVz2q2UN9FCKZ8Mkyis87QHFptcOU3ViLh0_PJyMxFSgwJZrd10kbYpQFl1/pubhtml#',
-            urlName: 'Builds',
-            backgroundColor: Colors.indigo(1)
+            urls: [
+              {
+                url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vRq-sQxkvdbvaJtQAGG6iVz2q2UN9FCKZ8Mkyis87QHFptcOU3ViLh0_PJyMxFSgwJZrd10kbYpQFl1/pubhtml#",
+                name: "Builds",
+              },
+            ],
+            type: "link",
+            backgroundColor: Colors.indigo(1),
           },
           {
-            url: 'https://docs.google.com/spreadsheets/d/1a--WPcWT7BOtw5J9TwJoRHEg_BAeT1mhAR0Fvdn_SZI/edit?usp=sharing',
-            urlName: 'Google Doc',
-            backgroundColor: Colors.light_blue(2)
+            urls: [
+              {
+                url: "https://docs.google.com/spreadsheets/d/1a--WPcWT7BOtw5J9TwJoRHEg_BAeT1mhAR0Fvdn_SZI/edit?usp=sharing",
+                name: "Google Doc",
+              },
+            ],
+            type: "link",
+            backgroundColor: Colors.light_blue(2),
           },
           {
-            url: 'https://genshin.honeyhunterworld.com/',
-            urlName: 'Database',
+            urls: [
+              {
+                url: "https://genshin.honeyhunterworld.com/",
+                name: "Database",
+              },
+            ],
+            type: "link",
           },
           {
-            url: 'https://spiral-abyss.appsample.com/',
-            urlName: 'Spiral Abyss',
+            urls: [
+              {
+                url: "https://spiral-abyss.appsample.com/",
+                name: "Spiral Abyss",
+              },
+            ],
+            type: "link",
           },
           {
-            url: 'https://genshin-impact.fandom.com/wiki/Genshin_Impact_Wiki',
-            urlName: 'Wiki',
+            urls: [
+              {
+                url: "https://genshin-impact.fandom.com/wiki/Genshin_Impact_Wiki",
+                name: "Wiki",
+              },
+            ],
+            type: "link",
           },
         ],
       },
       {
-        media: [
-          "league_of_legends1.jpg",
-          "league_of_legends2.jpg",
-          "league_of_legends3.jpg",
-          "league_of_legends4.jpg",
-          "league_of_legends5.png",
-          "league_of_legends6.png",
-        ],
-        groupName: 'League of Legends',
+        jsonKey: "leagueoflegends",
+        groupName: "League of Legends",
         urlGroups: [
           {
-            url: 'https://old.reddit.com/r/leagueoflegends/',
-            urlName: 'Reddit',
+            urls: [
+              {
+                url: "https://old.reddit.com/r/leagueoflegends/",
+                name: "Reddit",
+              },
+            ],
+            type: "link",
           },
           {
-            url: 'https://leagueoflegends.fandom.com/wiki/League_of_Legends_Wiki',
-            urlName: 'Wiki',
+            urls: [
+              {
+                url: "https://leagueoflegends.fandom.com/wiki/League_of_Legends_Wiki",
+                name: "Wiki",
+              },
+            ],
+            type: "link",
           },
           {
-            url: 'https://u.gg/',
-            urlName: 'u.gg Builds',
+            urls: [{ url: "https://u.gg/", name: "u.gg Builds" }],
+            type: "link",
           },
           {
-            url: 'https://na.op.gg/',
-            urlName: 'OP.gg',
+            urls: [{ url: "https://na.op.gg/", name: "OP.gg" }],
+            type: "link",
           },
         ],
-      },      
+      },
     ],
   },
   {
     tabName: "Mobile",
     linkGroups: [
       {
-        media: [
-          "gfl1.png",
-          "gfl2.png",
-          "gfl3.png",
-          "gfl4.png",
-          "gfl6.png",
-          "gfl7.png",
-          "gfl8.png",
-        ],
-        groupName: 'Girls\' Frontline',
+        jsonKey: "gfl",
+        groupName: "Girls' Frontline",
         urlGroups: [
           {
-            url: 'https://old.reddit.com/r/girlsfrontline/',
-            urlName: 'Reddit',
-            backgroundColor: Colors.red(1)
+            urls: [
+              {
+                url: "https://old.reddit.com/r/girlsfrontline/",
+                name: "Reddit",
+              },
+            ],
+            type: "link",
+            backgroundColor: Colors.red(1),
           },
           {
-            url: 'https://iopwiki.com/wiki/Girls\'_Frontline_Wiki',
-            urlName: 'Wiki',
+            urls: [
+              {
+                url: "https://iopwiki.com/wiki/Girls'_Frontline_Wiki",
+                name: "Wiki",
+              },
+            ],
+            type: "link",
           },
           {
-            url: 'https://docs.google.com/spreadsheets/d/1by5rcLdKXdhLClfVQ-FLvK_OM4Xko0CT9peKQwQCfXw/edit?usp=sharing',
-            urlName: 'Info Doc',
-            backgroundColor: Colors.light_blue(2)
+            urls: [
+              {
+                url: "https://docs.google.com/spreadsheets/d/1by5rcLdKXdhLClfVQ-FLvK_OM4Xko0CT9peKQwQCfXw/edit?usp=sharing",
+                name: "Main",
+              },
+              {
+                url: "https://docs.google.com/spreadsheets/d/1MKEvSx9zcgvWnRhv9IoL_-XUuHOq5ESFCSlJkxuE6OU/edit#gid=0",
+                name: "Armory",
+              },
+              {
+                url: "https://docs.google.com/spreadsheets/d/1iA07L2CvAgJkbRFvUGQToyO9RrZjJnNyAAtpKDD-Dvc/edit?usp=sharing",
+                name: "Ranking Diary",
+              },
+            ],
+            type: "menu",
+            menuName: "Docs",
+            backgroundColor: Colors.light_blue(2),
           },
           {
-            url: 'https://gfl.matsuda.tips/blog/',
-            urlName: 'Angry Midget',
+            urls: [
+              { url: "https://gfl.matsuda.tips/blog/", name: "Matsuda" },
+              {
+                url: "https://gamepress.gg/girlsfrontline/",
+                name: "Gamerpress",
+              },
+              { url: "http://dmesse.egloos.com/3568507", name: "DMesse" },
+            ],
+            type: "menu",
+            menuName: "Blogs",
           },
           {
-            url: 'https://gamepress.gg/girlsfrontline/',
-            urlName: 'Gamerpress',
+            urls: [
+              {
+                url: "https://aaeeschylus.github.io/main.html",
+                name: "Recipe Calculator",
+              },
+              {
+                url: "https://gfgfork.github.io/gf/main.html",
+                name: "Logistics Calculator",
+              },
+            ],
+            type: "menu",
+            menuName: "Cals",
           },
           {
-            url: 'http://dmesse.egloos.com/3568507',
-            urlName: 'DMesse',
+            urls: [
+              {
+                url: "https://docs.google.com/spreadsheets/d/10LJdksnM3zipOb72IneJD7WVp3765JYJEGg0LnodzDI/edit#gid=516072763",
+                name: "T-doll Analysis",
+              },
+            ],
+            type: "link",
           },
           {
-            url: 'https://docs.google.com/spreadsheets/d/1MKEvSx9zcgvWnRhv9IoL_-XUuHOq5ESFCSlJkxuE6OU/edit#gid=0',
-            urlName: 'Armory',
-            backgroundColor: Colors.light_blue(1)
+            urls: [
+              {
+                url: "https://pengupengupengu.github.io/gflmaps/",
+                name: "Maps",
+              },
+            ],
+            type: "link",
+            backgroundColor: Colors.teal(1),
           },
           {
-            url: 'https://docs.google.com/spreadsheets/d/1iA07L2CvAgJkbRFvUGQToyO9RrZjJnNyAAtpKDD-Dvc/edit?usp=sharing',
-            urlName: 'Ranking Diary',
-            backgroundColor: Colors.light_blue(1)
+            urls: [
+              {
+                url: "https://docs.google.com/spreadsheets/d/1TjHC4Vaed8dFqSkagM6teNlmBjFGPiUbTRnTnvxnnu4/edit#gid=296924292",
+                name: "Boss Strategies",
+              },
+            ],
+            type: "link",
           },
           {
-            url: 'https://aaeeschylus.github.io/main.html',
-            urlName: 'Recipe Calculator',
-          },
-          {
-            url: 'https://gfgfork.github.io/gf/main.html',
-            urlName: 'Logistics Calculator',
-          },
-          {
-            url: 'https://docs.google.com/spreadsheets/d/10LJdksnM3zipOb72IneJD7WVp3765JYJEGg0LnodzDI/edit#gid=516072763',
-            urlName: 'T-doll Analysis',
-          },
-          {
-            url: 'https://pengupengupengu.github.io/gflmaps/',
-            urlName: 'Maps',
-            backgroundColor: Colors.teal(1)
-          },
-          {
-            url: 'https://docs.google.com/spreadsheets/d/1TjHC4Vaed8dFqSkagM6teNlmBjFGPiUbTRnTnvxnnu4/edit#gid=296924292',
-            urlName: 'Boss Strategies',
-          },
-          {
-            url: 'https://docs.google.com/document/d/1-ETBAG_AfsIrEURvd5fXnmxHD02urvUuVcOQVCIqa6c/edit#heading=h.9bln0wx8twyq',
-            urlName: 'Next Ranking',
+            urls: [
+              {
+                url: "https://docs.google.com/document/d/1-ETBAG_AfsIrEURvd5fXnmxHD02urvUuVcOQVCIqa6c/edit#heading=h.9bln0wx8twyq",
+                name: "Next Ranking",
+              },
+            ],
+            type: "link",
             backgroundColor: Colors.indigo(2),
           },
         ],
       },
       {
-        media: [
-          "fgo3.jpg",
-          "fgo4.png",
-          "fgo5.jpg",
-          "fgo6.png",
-          "fgo7.png",
-          "fgo8.png",
-          "fgo9.jpg",
-          "fgo10.png",
-          "fgo11.png",
-          "fgo12.jpg",
-          "fgo13.png",
-          "fgo14.png",
-          "fgo15.png",
-          "fgo16.jpg",
-          "fgo17.png",
-        ],
-        groupName: 'Fate Grand Order',
+        jsonKey: "fgo",
+        groupName: "Fate Grand Order",
         urlGroups: [
           {
-            url: 'https://old.reddit.com/r/grandorder/',
-            urlName: 'Reddit',
+            urls: [
+              { url: "https://old.reddit.com/r/grandorder/", name: "Reddit" },
+            ],
+            type: "link",
           },
           {
-            url: 'https://grandorder.wiki/Main_Page',
-            urlName: 'Wiki',
-            backgroundColor: Colors.green(1)
+            urls: [{ url: "https://grandorder.wiki/Main_Page", name: "Wiki" }],
+            type: "link",
+            backgroundColor: Colors.green(1),
           },
           {
-            url: 'https://gamepress.gg/grandorder/',
-            urlName: 'Gamepress',
-            backgroundColor: Colors.teal(1)
+            urls: [
+              { url: "https://gamepress.gg/grandorder/", name: "Gamepress" },
+            ],
+            type: "link",
+            backgroundColor: Colors.teal(1),
           },
           {
-            url: 'https://gamepress.gg/grandorder/event-guides',
-            urlName: 'Events',
-            backgroundColor: Colors.indigo(1)
+            urls: [
+              {
+                url: "https://gamepress.gg/grandorder/event-guides",
+                name: "Events",
+              },
+            ],
+            type: "link",
+            backgroundColor: Colors.indigo(1),
           },
           {
-            url: 'https://shipfu.moe/fgo/',
-            urlName: 'Pull Calculator',
-          }
-        ],
-      },
-      {
-        media: [
-          "pricone1.jpg",
-          "pricone2.jpg",
-          "pricone3.jpg",
-          "pricone4.jpg",
-          "pricone5.jpg",
-          "pricone6.jpg",
-          "pricone7.png",
-          "pricone9.jpg",
-          "pricone10.jpg",
-        ],
-        groupName: 'Princess Connect',
-        urlGroups: [
-          {
-            url: 'https://old.reddit.com/r/Priconne/',
-            urlName: 'Reddit',
-          },
-          {
-            url: 'https://docs.google.com/spreadsheets/d/1b3Vjcc-wfrVfoqI93OMGLZPrJaxpclnBAerPXZdAfc0/edit#gid=57366839',
-            urlName: 'Tier/Guides',
-          },
-          {
-            url: 'https://pcrdfans.com/en/battle',
-            urlName: 'PvP',
-            backgroundColor: Colors.indigo(2)
-          },
-          {
-            url: "https://docs.google.com/spreadsheets/d/18VjvDwBrTinuWtqbxUxo0BNOvFpmztFO2p2D03tUxdA/edit#gid=1114939808",
-            urlName: "Ranking Recommendation",
-            backgroundColor: Colors.light_blue(2)
-          },
-          {
-            url: 'https://docs.qq.com/sheet/DWlhOaWJXYnZwVklT?tab=1ztn7s',
-            urlName: 'Clan Battle Records',
-            backgroundColor: Colors.purple(1)
+            urls: [{ url: "https://shipfu.moe/fgo/", name: "Pull Calculator" }],
+            type: "link",
           },
         ],
       },
       {
-        media: [
-          "e7-1.png",
-          "e7-3.jpg",
-          "e7-4.jpg",
-          "e7-5.png",
-          "e7-7.jpg",
-          "e7-8.jpg",
-        ],
-        groupName: 'Epic Seven',
+        jsonKey: "priconne",
+        groupName: "Princess Connect",
         urlGroups: [
           {
-            url: 'https://old.reddit.com/r/EpicSeven/',
-            urlName: 'Reddit',
-            backgroundColor: Colors.red(1)
+            urls: [
+              { url: "https://old.reddit.com/r/Priconne/", name: "Reddit" },
+            ],
+            type: "link",
           },
           {
-            url: 'https://docs.google.com/document/d/1ZQFAPU5y5BVbLgWdkegOnkcil4bZOUINdjCmTHaNuH0/edit',
-            urlName: 'New Player',
+            urls: [
+              {
+                url: "https://docs.google.com/spreadsheets/d/1b3Vjcc-wfrVfoqI93OMGLZPrJaxpclnBAerPXZdAfc0/edit#gid=57366839",
+                name: "Tier/Guides",
+              },
+            ],
+            type: "link",
           },
           {
-            url: 'https://docs.google.com/presentation/d/1hFz8lTVCNdv8wUE1qbUYKd42iQMCesLpeFgNxmJ3zfc/preview#slide=id.g4e4c6ec9ea_0_145',
-            urlName: 'Raid',
+            urls: [{ url: "https://pcrdfans.com/en/battle", name: "PvP" }],
+            type: "link",
+            backgroundColor: Colors.indigo(2),
           },
           {
-            url: "https://www.epic7stats.com",
-            urlName: "Pvp DB",
+            urls: [
+              {
+                url: "https://docs.google.com/spreadsheets/d/18VjvDwBrTinuWtqbxUxo0BNOvFpmztFO2p2D03tUxdA/edit#gid=1114939808",
+                name: "Ranking Recommendation",
+              },
+            ],
+            type: "link",
+            backgroundColor: Colors.light_blue(2),
           },
           {
-            url: 'https://yufine.co/',
-            urlName: 'Progression Guides',
-            backgroundColor: Colors.light_blue(2)
-          },
-          {
-            url: "https://epic7x.com/tier-list/",
-            urlName: "Tier",
-            backgroundColor: Colors.red(2)
-          },
-          {
-            url: "https://e7herder.com/tools/model-viewer",
-            urlName: "Model Viewer",
-          },
-          {
-            url: 'https://epicsevendb.com/',
-            urlName: 'Database',
+            urls: [
+              {
+                url: "https://docs.qq.com/sheet/DWlhOaWJXYnZwVklT?tab=1ztn7s",
+                name: "Clan Battle Records",
+              },
+            ],
+            type: "link",
+            backgroundColor: Colors.purple(1),
           },
         ],
       },
       {
-        media: [
-          "wallhaven-z8zjdo.jpg",
-          "wallhaven-z8qldy.jpg",
-          "wallhaven-z8q59j.jpg",
-          "wallhaven-z8p1jy.jpg",
-        ],
-        groupName: 'Misc',
+        jsonKey: "e7",
+        groupName: "Epic Seven",
         urlGroups: [
           {
-            url: 'https://old.reddit.com/r/gachagaming/',
-            urlName: 'Gacha Gaming',
-            backgroundColor: Colors.red(1)
+            urls: [
+              { url: "https://old.reddit.com/r/EpicSeven/", name: "Reddit" },
+            ],
+            type: "link",
+            backgroundColor: Colors.red(1),
           },
           {
-            url: 'https://docs.google.com/spreadsheets/d/1sIz4LP3j-BPCmR3MMeu9Ic5Uqi3NckflybfxRvWMk2U/edit?usp=sharing',
-            urlName: 'Gachas Doc',
+            urls: [
+              {
+                url: "https://docs.google.com/document/d/1ZQFAPU5y5BVbLgWdkegOnkcil4bZOUINdjCmTHaNuH0/edit",
+                name: "New Player",
+              },
+            ],
+            type: "link",
+          },
+          {
+            urls: [
+              {
+                url: "https://docs.google.com/presentation/d/1hFz8lTVCNdv8wUE1qbUYKd42iQMCesLpeFgNxmJ3zfc/preview#slide=id.g4e4c6ec9ea_0_145",
+                name: "Raid",
+              },
+            ],
+            type: "link",
+          },
+          {
+            urls: [{ url: "https://www.epic7stats.com", name: "Pvp DB" }],
+            type: "link",
+          },
+          {
+            urls: [{ url: "https://yufine.co/", name: "Progression Guides" }],
+            type: "link",
+            backgroundColor: Colors.light_blue(2),
+          },
+          {
+            urls: [{ url: "https://epic7x.com/tier-list/", name: "Tier" }],
+            type: "link",
+            backgroundColor: Colors.red(2),
+          },
+          {
+            urls: [
+              {
+                url: "https://e7herder.com/tools/model-viewer",
+                name: "Model Viewer",
+              },
+            ],
+            type: "link",
+          },
+          {
+            urls: [{ url: "https://epicsevendb.com/", name: "Database" }],
+            type: "link",
           },
         ],
-      },       
+      },
+      {
+        jsonKey: "bluearchive",
+        groupName: "Blue Archive",
+        urlGroups: [
+          {
+            urls: [
+              {
+                url: "https://old.reddit.com/r/BlueArchive/",
+                name: "Reddit",
+              },
+            ],
+            type: "link",
+            backgroundColor: Colors.red(1),
+          },
+          {
+            urls: [
+              {
+                url: "https://bluearchive.wiki/wiki/Main_Page",
+                name: "Wiki",
+              },
+            ],
+            type: "link",
+          },
+          {
+            urls: [
+              {
+                url: "https://dolicon-bluearchive.netlify.app/",
+                name: "Database",
+              },
+            ],
+            type: "link",
+          },
+          {
+            urls: [
+              {
+                url: "https://docs.google.com/document/d/1IrJ1z9Lsn7QY59xKhF9blcqSxIevKfuB/preview?rtpof=true&sd=true&pru=AAABfSWyFw0*NVv6Q-hnr9RVBoX5GH2fZg",
+                name: "General",
+              },
+            ],
+            type: "link",
+          },
+          {
+            urls: [
+              {
+                url: "https://docs.google.com/document/d/1lbXudYH5w3dLdKWxDM4HODZPeuKDRJqOPiU5FkhjvwE/edit",
+                name: "PvP",
+              },
+            ],
+            type: "link",
+          },
+          {
+            urls: [
+              {
+                url: "https://docs.google.com/document/d/1bvYGwIh-9o-2JQ4Q2MQXtsL0peiCPrRuw0l3HQmTrZ0/edit",
+                name: "Raid",
+              },
+            ],
+            type: "link",
+          },
+        ],
+      },
+      {
+        jsonKey: "root",
+        groupName: "Misc",
+        urlGroups: [
+          {
+            urls: [
+              {
+                url: "https://old.reddit.com/r/gachagaming/",
+                name: "Gacha Gaming",
+              },
+            ],
+            type: "link",
+            backgroundColor: Colors.red(1),
+          },
+          {
+            urls: [
+              {
+                url: "https://docs.google.com/spreadsheets/d/1sIz4LP3j-BPCmR3MMeu9Ic5Uqi3NckflybfxRvWMk2U/edit?usp=sharing",
+                name: "Gachas Doc",
+              },
+            ],
+            type: "link",
+          },
+        ],
+      },
     ],
   },
   {
     tabName: "",
     linkGroups: [
       {
-        media: [
-          "wallhaven-v9oejp.jpg",
-        ],
-        groupName: 'Magicami',
+        jsonKey: "root",
+        groupName: "Magicami",
         urlGroups: [
           {
-            url: "https://old.reddit.com/r/magicami/",
-            urlName: "Reddit",
-            backgroundColor: Colors.red(1)
+            urls: [
+              { url: "https://old.reddit.com/r/magicami/", name: "Reddit" },
+            ],
+            type: "link",
+            backgroundColor: Colors.red(1),
           },
           {
-            url: "https://docs.google.com/document/d/11-Bml0nbBUMw9sCQDAAwfyb_ve3kCvqvKmJEuP5N2-Q/edit#heading=h.8k3xvzzgexj1",
-            urlName: "Beginner's Guide",
-            backgroundColor: Colors.light_blue(2)
+            urls: [
+              {
+                url: "https://docs.google.com/document/d/11-Bml0nbBUMw9sCQDAAwfyb_ve3kCvqvKmJEuP5N2-Q/edit#heading=h.8k3xvzzgexj1",
+                name: "Beginner's Guide",
+              },
+            ],
+            type: "link",
+            backgroundColor: Colors.light_blue(2),
           },
           {
-            url: "https://appmedia.jp/magicami/3948385",
-            urlName: "JP wiki",
+            urls: [
+              { url: "https://appmedia.jp/magicami/3948385", name: "JP wiki" },
+            ],
+            type: "link",
           },
           {
-            url: "https://eight04.github.io/mgcm-skill-data/",
-            urlName: "Damage Simulation",
+            urls: [
+              {
+                url: "https://eight04.github.io/mgcm-skill-data/",
+                name: "Damage Simulation",
+              },
+            ],
+            type: "link",
           },
           {
-            url: "https://docs.google.com/document/d/e/2PACX-1vTosG4UlrZ_2zsunGSb8tIpfYDH3bcuUO-fPq00GSZfftPI825k-jX500gOWP4084nECChjd9uOqFda/pub",
-            urlName: "Strat Guide",
+            urls: [
+              {
+                url: "https://docs.google.com/document/d/e/2PACX-1vTosG4UlrZ_2zsunGSb8tIpfYDH3bcuUO-fPq00GSZfftPI825k-jX500gOWP4084nECChjd9uOqFda/pub",
+                name: "Strat Guide",
+              },
+            ],
+            type: "link",
           },
         ],
       },
       {
-        media: [
-          "al/al-2.png",
-          "al/al-4.png",
-          "al/al-6.png",
-          "al/al-8.png",
-          "al/al-9.png",
-          "al/al-10.png",
-          "al/al-11.png",
-          "al/al-12.png",
-          "al/al-13.png",
-          "al/al-15.png",
-          "al/al-16.png",
-          "al/al-23.png",
-          "al/al-24.png",
-          "al/al-25.png",
-          "al/al-26.png",
-          "al/al-27.png",
-          "al/al-28.png",
-          "al/al-29.png",
-          "al/al-30.png",
-          "al/al-33.png",
-          "al/al-36.png",
-          "al/al-38.png",
-          "al/al-41.png",
-          "al/al-42.png",
-          "al/al-43.png",
-          "al/al-44.png",
-        ],
-        groupName: 'Azur Lane',
+        jsonKey: "al",
+        groupName: "Azur Lane",
         urlGroups: [
           {
-            url: 'https://old.reddit.com/r/AzureLane/',
-            urlName: 'Reddit',
-            backgroundColor: Colors.red(1)
+            urls: [
+              { url: "https://old.reddit.com/r/AzureLane/", name: "Reddit" },
+            ],
+            type: "link",
+            backgroundColor: Colors.red(1),
           },
           {
-            url: 'https://azurlane.koumakan.jp/Azur_Lane_Wiki',
-            urlName: 'Wiki',
-            backgroundColor: Colors.purple(0)
+            urls: [
+              {
+                url: "https://azurlane.koumakan.jp/Azur_Lane_Wiki",
+                name: "Wiki",
+              },
+            ],
+            type: "link",
+            backgroundColor: Colors.purple(0),
           },
           {
-            url: 'https://slaimuda.github.io/ectl/#/home',
-            urlName: 'Tier List',
-            backgroundColor: Colors.light_blue(1)
+            urls: [
+              {
+                url: "https://slaimuda.github.io/ectl/#/home",
+                name: "Tier List",
+              },
+            ],
+            type: "link",
+            backgroundColor: Colors.light_blue(1),
           },
         ],
       },
-    ]
-  },    
+    ],
+  },
 ];

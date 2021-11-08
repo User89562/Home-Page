@@ -11,30 +11,35 @@ export class BackgroundUtil {
     backgrounds:BackgroundMedia[] = BACKGROUND_MEDIA;
     constructor(){}
 
-    retrieveBackgroundImage(type:String, index: number): MediaLink {
+    retrieveBackgroundImage(type:String, index: number, json: any, jsonKeys: string[]): MediaLink {
         let bgLink = '';
         let bgType = 'image';
+        let jsonKey = '';
 
-        let bgTabIndex = this.backgrounds.findIndex(b => b.tabIndex === index);
+        let bg = this.backgrounds[index].bgImages;
 
-        if (bgTabIndex === -1) {
-            bgTabIndex = 0;
+        if (!bg) {
+            bg = this.backgrounds[0].bgImages;
         }
 
-        this.backgrounds[bgTabIndex].bgImages.forEach(backgroundType => {
-            switch(type) {
-                case 'l':
-                    bgLink = backgroundType.l![this.randomNumber(backgroundType.l?.length!)];
-                    break;
-                case 'h':
-                    bgLink= backgroundType.h![this.randomNumber(backgroundType.h?.length!)];
-                    break;
-                default:
-                    const dayOfWeek = new Date().getDay();
-                    bgLink=backgroundType.d![dayOfWeek];//same for each day of the week (0-6)
-                    break;
-            }
-        });
+        switch(type) {
+            case 'l':
+                jsonKey != bg.l;
+                break;
+            case 'h':
+                jsonKey != bg.h;
+                break;
+            default:
+                jsonKey=bg.d
+                break;
+        }
+
+        if (jsonKeys.includes(jsonKey)){
+            const links = json[jsonKey]
+            const dayOfWeek = new Date().getDay();
+            bgLink = jsonKey + '/' +links[dayOfWeek];     
+               
+          }    
 
         return new MediaLink(bgLink, bgType);
     }
