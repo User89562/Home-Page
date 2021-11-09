@@ -16,7 +16,7 @@ export class BackgroundUtil {
         let bgType = 'image';
         let jsonKey = '';
 
-        let bg = this.backgrounds[index].bgImages;
+        let bg = this.backgrounds[index]?.bgImages;
 
         if (!bg) {
             bg = this.backgrounds[0].bgImages;
@@ -37,8 +37,7 @@ export class BackgroundUtil {
         if (jsonKeys.includes(jsonKey)){
             const links = json[jsonKey]
             const dayOfWeek = new Date().getDay();
-            bgLink = jsonKey + '/' +links[dayOfWeek];     
-               
+            bgLink = jsonKey + '/' +links[dayOfWeek];   
           }    
 
         return new MediaLink(bgLink, bgType);
