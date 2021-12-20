@@ -3,12 +3,6 @@ import { BackgroundMedia } from "../entities/background-media";
 import { EnumUtil } from "./enum-util";
 import { JsonUtil } from "./json-util";
 
-//image set settings:
-    // background type: image or animation
-    // default = image.json or animation.json -> normal
-    // set2 = imageSet2.json or animationSet2.json -> ecchi
-    // set3 = imageSet3.json or animationSet3.json -> hentai
-
 class TabBackground {
     constructor(
         public tabIndex: number,

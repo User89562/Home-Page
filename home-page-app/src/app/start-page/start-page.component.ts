@@ -37,12 +37,6 @@ export class StartPageComponent implements OnInit {
     // set inital values based on settings
     this.visibility = this.settingsUtil.getBgVisibility();
 
-    //image set settings:
-    // background type: image or animation
-    // default = image.json or animation.json -> normal
-    // set2 = imageSet2.json or animationSet2.json -> ecchi
-    // set3 = imageSet3.json or animationSet3.json -> hentai
-
     // array with backgrounds(within rendererUtil) for all tabs based on chosen background type & set
     this.rendererUtil.getAllBackgrounds(this.settingsUtil.getBgMediaType(), this.settingsUtil.getBgImageSet());
 
