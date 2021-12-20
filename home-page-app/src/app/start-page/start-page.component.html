@@ -1,7 +1,7 @@
 <div class="background-container">
   <app-background-renderer
-    [media]="chosenBackground.link"
-    [mediaType]="chosenBackground.type"
+    [media]="rendererUtil.getBackground(selectedTabIndex)"
+    [mediaType]="settingsUtil.getBgMediaType()"
   ></app-background-renderer>
   <mat-tab-group
     animationDuration="0ms"
@@ -92,22 +92,8 @@
     mat-icon-button
     aria-label="Settings icon button"
     class="settings-button"
-    [matMenuTriggerFor]="menu"
+    (click)="displaySettings()"
   >
     <mat-icon>settings</mat-icon>
   </button>
-  <mat-menu #menu="matMenu" yPosition="above" xPosition="before">
-    <button mat-menu-item (click)="toggleVisibility()">
-      <mat-icon>visibility</mat-icon>
-      <span>Show/Hide</span>
-    </button>
-    <button mat-menu-item>
-      <mat-icon>video_label</mat-icon>
-      <span>Pause/Play</span>
-    </button>
-    <button mat-menu-item (click)="toggleBackgroundType()">
-      <mat-icon>privacy_tip</mat-icon>
-      <span>NSFW</span>
-    </button>
-  </mat-menu>
 </div>

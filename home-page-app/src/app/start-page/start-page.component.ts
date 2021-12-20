@@ -1,14 +1,12 @@
-import { BackgroundUtil, MediaLink } from './../utils/background-util';
+import { Router } from '@angular/router';
+import { ModuleSettingsComponent } from './../custom-components/module-settings/module-settings.component';
 import {Component, HostListener, OnInit } from '@angular/core';
 import { STARTPAGE, StartPageLinks } from '../start-page-json';
-import json_data from '../images.json'
-
-class LocalStorageSettings {
-  constructor(
-    public visibility: string,
-    public backgroundType: string,
-  ){}
-}
+import json_images_data from '../json/images.json'
+import { RendererUtil } from '../utils/renderer-util';
+import { SettingsUtil } from '../utils/settings-util';
+import { MediaLink } from '../entities/media-link';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-start-page',
@@ -19,42 +17,42 @@ class LocalStorageSettings {
 export class StartPageComponent implements OnInit {
   startPageLinks!: StartPageLinks[];
   assetsPath = 'assets/images/';
-  localStorageName: string = 'local-home-page'
-  visibility = '';
-  chosenBackground!: MediaLink;
-  selectedTabIndex = 0;
-  localSettings!: LocalStorageSettings;
-  backgroundUtils = new BackgroundUtil();
-  jsonImages: any = json_data;
-  jsonKeys = Object.keys(json_data);
 
-  constructor() { }
+  visibility = '';
+  chosenBackgrounds: string[] = [];
+  selectedTabIndex = 0;
+
+  jsonImages: any = json_images_data;
+  jsonKeys = Object.keys(json_images_data);
+  rendererUtil = new RendererUtil();
+  settingsUtil = new SettingsUtil();
+
+  constructor(private dialog: MatDialog, private router:Router) {
+
+   }
 
   ngOnInit() {
-    //set stuff in localstorage if there isn't anything there
-    if (!localStorage.getItem(this.localStorageName)) { 
-      //set default options
-      localStorage.setItem(this.localStorageName, JSON.stringify(new LocalStorageSettings('visible','d')));
-    } 
-    //retrieve info from local storage
-    this.localSettings = JSON.parse(localStorage.getItem(this.localStorageName) || '');
+    // retrieve user settings
+    this.settingsUtil.getSettings();
+    // set inital values based on settings
+    this.visibility = this.settingsUtil.getBgVisibility();
 
- 
-    this.visibility = this.localSettings.visibility;
+    //image set settings:
+    // background type: image or animation
+    // default = image.json or animation.json -> normal
+    // set2 = imageSet2.json or animationSet2.json -> ecchi
+    // set3 = imageSet3.json or animationSet3.json -> hentai
 
-    this.chosenBackground = this.backgroundUtils.retrieveBackgroundImage(this.localSettings.backgroundType, 0, this.jsonImages, this.jsonKeys);
+    // array with backgrounds(within rendererUtil) for all tabs based on chosen background type & set
+    this.rendererUtil.getAllBackgrounds(this.settingsUtil.getBgMediaType(), this.settingsUtil.getBgImageSet());
+
+    //TODO: put link-group stuff also in rendererUtil
     this.startPageLinks = STARTPAGE;
-
     this.startPageLinks.forEach(startPageLink => {
       startPageLink.linkGroups.forEach(linkGroup => {
           if (this.jsonKeys.includes(linkGroup.jsonKey)){
             const linkGroupImages = this.jsonImages[linkGroup.jsonKey]
-            if (linkGroup.jsonKey == 'root') {
-              linkGroup.selectedMedia = linkGroupImages![this.randomNumber(linkGroupImages?.length!)];
-            } else {
-              linkGroup.selectedMedia = linkGroup.jsonKey + '/' +linkGroupImages![this.randomNumber(linkGroupImages?.length!)];
-            }
-            
+            linkGroup.selectedMedia = linkGroup.jsonKey + '/' +linkGroupImages![this.randomNumber(linkGroupImages?.length!)];
           }        
       });
     });    
@@ -73,15 +71,25 @@ export class StartPageComponent implements OnInit {
     }
   }
 
-  toggleBackgroundType(): void {
+  displaySettings(): void {
+    const dialogRef =this.dialog.open(ModuleSettingsComponent, {
+      data: ''
+    });
 
+    dialogRef.afterClosed().subscribe(r => {
+      if (r) {
+        this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+        this.router.onSameUrlNavigation = 'reload';
+        this.router.navigate(['/']);
+      }
+    });
   }
 
   
 
   tabChanged(event: number) {
     this.selectedTabIndex = event;
-    this.chosenBackground = this.backgroundUtils.retrieveBackgroundImage(this.localSettings.backgroundType, this.selectedTabIndex, this.jsonImages, this.jsonKeys);
+    //this.chosenBackground = this.backgroundUtils.retrieveBackgroundImage('', this.selectedTabIndex, this.jsonImages, this.jsonKeys);
   }
 
   @HostListener('window:keydown', ['$event'])

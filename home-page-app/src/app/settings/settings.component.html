@@ -1,0 +1,89 @@
+<div>
+  <form [formGroup]="settingsForm">
+    <!--Background-->
+    <div formGroupName="background">
+      <h1>Background</h1>
+      <div class="form-field">
+        <div class="field-title">
+          <mat-label>Visibility</mat-label>
+        </div>
+        <mat-radio-group
+          aria-label="Select an option"
+          formControlName="visibility"
+          fxLayoutGap="15px"
+        >
+          <mat-radio-button value="visible">Visible</mat-radio-button>
+          <mat-radio-button value="hidden" >Hidden</mat-radio-button>
+        </mat-radio-group>
+      </div>
+      <div class="form-field">
+        <div class="field-title">
+          <mat-label>Media Type</mat-label>
+        </div>
+        <mat-radio-group
+          aria-label="Select an option"
+          formControlName="mediaType"
+          fxLayoutGap="15px"
+        >
+          <mat-radio-button value="image">Image</mat-radio-button>
+          <mat-radio-button value="animation" disabled>Animation</mat-radio-button>
+        </mat-radio-group>
+      </div>
+      <div class="form-field">
+        <div class="field-title">
+          <mat-label>Json Set</mat-label>
+        </div>
+        <mat-radio-group aria-label="Select an option" formControlName="imageSet" fxLayoutGap="15px">
+          <mat-radio-button value="default">Set 1</mat-radio-button>
+          <mat-radio-button value="set2">Set 2</mat-radio-button>
+          <mat-radio-button value="set3">Set 3</mat-radio-button>
+        </mat-radio-group>
+      </div>
+      
+    </div>
+    <mat-divider></mat-divider>
+    <!--Link Group-->
+    <div formGroupName="linkGroup">
+      <h1>Link Groups</h1>
+      <div class="form-field">
+        <div class="field-title">
+          <mat-label>Visibility</mat-label>
+        </div>
+        <mat-radio-group
+          aria-label="Select an option"
+          formControlName="visibility"
+          fxLayoutGap="15px"
+        >
+          <mat-radio-button value="visible">Visible</mat-radio-button>
+          <mat-radio-button value="hidden" disabled>Hidden</mat-radio-button>
+        </mat-radio-group>
+      </div>
+      <div class="form-field">
+        <div class="field-title">
+          <mat-label>Media Type</mat-label>
+        </div>
+        <mat-radio-group
+          aria-label="Select an option"
+          formControlName="mediaType"
+          fxLayoutGap="15px"
+        >
+          <mat-radio-button value="image">Image</mat-radio-button>
+          <mat-radio-button value="animation" disabled>Animation</mat-radio-button>
+        </mat-radio-group>
+      </div>
+      <div class="form-field">
+        <div class="field-title">
+          <mat-label>Json Set</mat-label>
+        </div>
+        <mat-radio-group aria-label="Select an option" formControlName="imageSet" fxLayoutGap="15px">
+          <mat-radio-button value="default">Set 1</mat-radio-button>
+          <mat-radio-button value="set2">Set 2</mat-radio-button>
+          <mat-radio-button value="set3">Set 3</mat-radio-button>
+        </mat-radio-group>
+      </div>
+      
+    </div>
+  </form>
+  <!--Debugging
+  {{settingsForm.value | json}}
+--></div>

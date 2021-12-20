@@ -7,6 +7,10 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatIconModule} from '@angular/material/icon'; 
 import {MatMenuModule} from '@angular/material/menu';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 
 @NgModule({
@@ -19,6 +23,10 @@ import {MatMenuModule} from '@angular/material/menu';
     MatDividerModule,
     MatIconModule,
     MatMenuModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatRadioModule,
+    MatCheckboxModule,
   ]
 })
 export class AngularComponentsModule { }

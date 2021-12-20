@@ -1,24 +1,11 @@
-
-
-export interface BackgroundMedia {
-    bgImages: MediaType;
-    bgAnimations?: MediaType[];
-}
-
-export interface MediaType {
-    d: string; //default
-    l?: string;
-    h?: string;
-}
+import { BackgroundMedia } from "./entities/background-media";
 
 /** TODO: add more backgrounds for other tabs
- * Each obj = index for each page (0 = default, 1 = developer..etc)
+ * if there is no tabIndex for that tab it will default to 0
  */
 export const BACKGROUND_MEDIA: BackgroundMedia[] = [
     {
-        bgImages: 
-            {
-                d: 'default-bgs'
-            }
+        tabIndex: 0,
+        jsonKey: 'backgrounds'
     },
 ];

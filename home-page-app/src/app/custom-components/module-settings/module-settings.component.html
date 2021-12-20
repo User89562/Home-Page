@@ -1,0 +1,12 @@
+<div fxLayout="column" class="module-container">
+  <h1>Settings</h1>
+  <mat-divider></mat-divider>
+  <div class="settings-container" fxLayoutAlign="start center">
+    <app-settings></app-settings>
+  </div>
+  <mat-divider></mat-divider>
+  <div mat-dialog-actions class="dialog-action" dir="rtl" *ngIf="settingsComponent" fxLayoutGap="15px">
+    <button mat-raised-button class="action-button" color="primary" [mat-dialog-close]="settingsComponent.saveSettings()" cdkFocusInitial >Save</button>
+    <button mat-raised-button color="warn" class="action-button" (click)="onClick()">Cancel</button>
+  </div>
+</div>

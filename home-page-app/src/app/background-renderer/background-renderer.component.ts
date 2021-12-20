@@ -12,14 +12,12 @@ export class BackgroundRendererComponent implements OnChanges {
   assetsAnimatedPath ='assets/animated/';
   counter = 0;
 
-  constructor() { }
+  constructor() {}
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes.media.currentValue) {
       this.media = changes.media.currentValue;
-      this.mediaType = changes.mediaType.currentValue;
-    }
-
+    } 
   }
 
   loopVideo(event: any) {
