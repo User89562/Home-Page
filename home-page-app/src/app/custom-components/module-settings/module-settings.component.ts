@@ -18,6 +18,8 @@ import { Subscription, filter } from "rxjs";
 })
 export class ModuleSettingsComponent implements OnInit, AfterViewInit {
   routerSubscription!: Subscription;
+  saved = false;
+  cancel = false;
   //save settings method from settings component using viewchild
   @ViewChild(SettingsComponent) settingsComponent!: SettingsComponent;
 
@@ -51,7 +53,7 @@ export class ModuleSettingsComponent implements OnInit, AfterViewInit {
   }
 
   saveSettings(): void {
-    this.settingsComponent.saveSettings();
-    this.dialogRef.close();
+    this.settingsComponent.saveUserSettings();
+    //this.dialogRef.close();
   }
 }

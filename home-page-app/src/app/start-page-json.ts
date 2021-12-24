@@ -441,7 +441,7 @@ export const STARTPAGE: StartPageLinks[] = [
           },
         ],
       },
-      {
+      /*{
         jsonKey: "fgo",
         groupName: "Fate Grand Order",
         urlGroups: [
@@ -478,7 +478,7 @@ export const STARTPAGE: StartPageLinks[] = [
             type: "link",
           },
         ],
-      },
+      },*/
       {
         jsonKey: "priconne",
         groupName: "Princess Connect",
@@ -491,12 +491,17 @@ export const STARTPAGE: StartPageLinks[] = [
           },
           {
             urls: [
-              {
-                url: "https://docs.google.com/spreadsheets/d/1b3Vjcc-wfrVfoqI93OMGLZPrJaxpclnBAerPXZdAfc0/edit#gid=57366839",
-                name: "Tier/Guides",
+              { url: "https://docs.qq.com/sheet/DWlhOaWJXYnZwVklT?tab=1ztn7s",
+                name: "CB Records", 
               },
+              {
+                url: "https://docs.google.com/spreadsheets/d/1JXbzIF4dWqzmmBwAxuNp74_v8eSM0tuDehWZtN9-lxY/edit#gid=504351475",
+                name: "Unique Equip",
+              },
+              { url: "https://docs.google.com/spreadsheets/d/1b3Vjcc-wfrVfoqI93OMGLZPrJaxpclnBAerPXZdAfc0/edit#gid=57366839", name: "Guides" },
             ],
-            type: "link",
+            type: "menu",
+            menuName: "Docs",
           },
           {
             urls: [{ url: "https://pcrdfans.com/en/battle", name: "PvP" }],
@@ -516,12 +521,11 @@ export const STARTPAGE: StartPageLinks[] = [
           {
             urls: [
               {
-                url: "https://docs.qq.com/sheet/DWlhOaWJXYnZwVklT?tab=1ztn7s",
-                name: "Clan Battle Records",
+                url: "https://fansubbing.com/priconne-tower-of-luna-guide/",
+                name: "Luna Tower",
               },
             ],
             type: "link",
-            backgroundColor: Colors.purple(1),
           },
         ],
       },
@@ -674,7 +678,7 @@ export const STARTPAGE: StartPageLinks[] = [
   {
     tabName: "",
     linkGroups: [
-      {
+      /*{
         jsonKey: "root",
         groupName: "Magicami",
         urlGroups: [
@@ -720,7 +724,7 @@ export const STARTPAGE: StartPageLinks[] = [
             type: "link",
           },
         ],
-      },
+      },*/
       {
         jsonKey: "al",
         groupName: "Azur Lane",

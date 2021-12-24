@@ -1,11 +1,11 @@
+import { RendererUtil } from './../utils/renderer-util';
+import { TabBackground } from './../entities/tab-ground';
 import { Router } from '@angular/router';
 import { ModuleSettingsComponent } from './../custom-components/module-settings/module-settings.component';
 import {Component, HostListener, OnInit } from '@angular/core';
 import { STARTPAGE, StartPageLinks } from '../start-page-json';
 import json_images_data from '../json/images.json'
-import { RendererUtil } from '../utils/renderer-util';
 import { SettingsUtil } from '../utils/settings-util';
-import { MediaLink } from '../entities/media-link';
 import { MatDialog } from '@angular/material/dialog';
 
 @Component({
@@ -16,16 +16,14 @@ import { MatDialog } from '@angular/material/dialog';
 
 export class StartPageComponent implements OnInit {
   startPageLinks!: StartPageLinks[];
-  assetsPath = 'assets/images/';
-
   visibility = '';
   chosenBackgrounds: string[] = [];
   selectedTabIndex = 0;
-
+  tabBackgrounds: TabBackground[] = [];
   jsonImages: any = json_images_data;
   jsonKeys = Object.keys(json_images_data);
-  rendererUtil = new RendererUtil();
   settingsUtil = new SettingsUtil();
+  rendererUtil = new RendererUtil();
 
   constructor(private dialog: MatDialog, private router:Router) {
 
@@ -37,19 +35,19 @@ export class StartPageComponent implements OnInit {
     // set inital values based on settings
     this.visibility = this.settingsUtil.getBgVisibility();
 
-    // array with backgrounds(within rendererUtil) for all tabs based on chosen background type & set
-    this.rendererUtil.getAllBackgrounds(this.settingsUtil.getBgMediaType(), this.settingsUtil.getBgImageSet());
+    //retrieve tab backgrounds from settings
+    this.tabBackgrounds = this.settingsUtil.getTabBackgroundStorage();
+    if (this.tabBackgrounds.length === 0) { // if nothing was set in storage
+      this.tabBackgrounds = this.rendererUtil.getAllBackgrounds(this.settingsUtil.getBgMediaType(), this.settingsUtil.getBgJsonSet());
+      this.settingsUtil.setTabBackgroundStorage(this.tabBackgrounds);
+    }
 
-    //TODO: put link-group stuff also in rendererUtil
-    this.startPageLinks = STARTPAGE;
-    this.startPageLinks.forEach(startPageLink => {
-      startPageLink.linkGroups.forEach(linkGroup => {
-          if (this.jsonKeys.includes(linkGroup.jsonKey)){
-            const linkGroupImages = this.jsonImages[linkGroup.jsonKey]
-            linkGroup.selectedMedia = linkGroup.jsonKey + '/' +linkGroupImages![this.randomNumber(linkGroupImages?.length!)];
-          }        
-      });
-    });    
+    //retrieve all linkgroups from settings
+    this.startPageLinks = this.settingsUtil.getLinkGroupStorage();
+    if (this.startPageLinks.length === 0) {// if nothing was set in storage
+      this.startPageLinks = this.rendererUtil.getLinkGroups(this.settingsUtil.getLgMediaType(), this.settingsUtil.getLgJsonSet());
+      this.settingsUtil.setLinkgroupStorage(this.startPageLinks);
+    }
   }
 
   randomNumber(max: number): number {
@@ -67,7 +65,8 @@ export class StartPageComponent implements OnInit {
 
   displaySettings(): void {
     const dialogRef =this.dialog.open(ModuleSettingsComponent, {
-      data: ''
+      data: '',
+      autoFocus: false
     });
 
     dialogRef.afterClosed().subscribe(r => {

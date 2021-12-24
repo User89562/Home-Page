@@ -8,8 +8,6 @@ import {Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core
 export class BackgroundRendererComponent implements OnChanges {
   @Input() media: string = '';
   @Input() mediaType: string = '';
-  assetsImagePath = 'assets/images/';
-  assetsAnimatedPath ='assets/animated/';
   counter = 0;
 
   constructor() {}

@@ -1,6 +1,6 @@
 <div class="background-container">
   <app-background-renderer
-    [media]="rendererUtil.getBackground(selectedTabIndex)"
+    [media]="rendererUtil.getBackground(selectedTabIndex, tabBackgrounds)"
     [mediaType]="settingsUtil.getBgMediaType()"
   ></app-background-renderer>
   <mat-tab-group
@@ -23,7 +23,7 @@
             <div fxFlexFill fxLayoutAlign="center center">
               <img
                 mat-card-image
-                [src]="assetsPath + linkGroup.selectedMedia"
+                [src]="linkGroup.selectedMedia"
               />
               <h1 class="group-name">{{ linkGroup?.groupName }}</h1>
               <div

@@ -6,7 +6,7 @@
   </div>
   <mat-divider></mat-divider>
   <div mat-dialog-actions class="dialog-action" dir="rtl" *ngIf="settingsComponent" fxLayoutGap="15px">
-    <button mat-raised-button class="action-button" color="primary" [mat-dialog-close]="settingsComponent.saveSettings()" cdkFocusInitial >Save</button>
+    <button mat-raised-button class="action-button" color="primary"  [mat-dialog-close]="true" (click)="saveSettings()" type="button">Save</button>
     <button mat-raised-button color="warn" class="action-button" (click)="onClick()">Cancel</button>
   </div>
 </div>
