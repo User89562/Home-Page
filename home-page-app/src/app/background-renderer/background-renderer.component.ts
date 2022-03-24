@@ -25,17 +25,18 @@ export class BackgroundRendererComponent implements OnChanges {
     }
   }
 
-  /* TODO: might not need
-  determineType(): void {
+  determineType(): boolean {
     if (this.media != '') {
       const temp = this.media.split('.');
       const extension = temp[temp.length-1];
       if (extension === 'mp4') {
         this.mediaType = 'video';
-      } else {
-        this.mediaType = 'image';
-      }  
+        return false;
+      } 
+      this.mediaType = 'image';
+      return true;
     }
-  }*/
+    return false;
+  }
 
 }

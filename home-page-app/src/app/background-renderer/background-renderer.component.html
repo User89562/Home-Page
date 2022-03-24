@@ -1,12 +1,9 @@
-<div *ngIf="mediaType === 'image';else video">
+<div *ngIf="determineType();else video">
   <img [src]="media" class="background-image">
   <!--<app-start-page></app-start-page>-->
 </div>
 <ng-template #video>
-  <video autoplay="autoplay" [muted]="'muted'"class="background-video" (ended)="loopVideo($event)">
-    <source [src]=" + media" type="video/mp4">
-    <source [src]=" media" type="video/ogg">
-  Your browser does not support the video tag.
+  <video autoplay="autoplay" [muted]="'muted'"class="background-video" (ended)="loopVideo($event)" [src]="media" type="video/mp4">
   </video> 
 </ng-template>
 

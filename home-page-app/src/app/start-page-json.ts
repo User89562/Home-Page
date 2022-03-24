@@ -209,8 +209,33 @@ export const STARTPAGE: StartPageLinks[] = [
             type: "link",
           },
           {
-            urls: [{ url: "https://lostarkhub.com/", name: "News" }],
+            urls: [{ url: "https://papunika.com/", name: "Papunika" }],
+            backgroundColor: Colors.teal(2),
             type: "link",
+          },
+          {
+            urls: [{ url: "https://lost-ark.maxroll.gg/", name: "Maxroll" }],
+            type: "link",
+            backgroundColor: Colors.light_blue(1),
+          },
+          {
+            urls: [
+              {
+                url: "https://docs.google.com/document/d/1rjP396p9taznSydWyVX_d-Rnoas8aWYJv69e5JyXF2g/edit",
+                name: "Santione Index",
+              },
+              {
+                url: "https://docs.google.com/spreadsheets/d/1JgPTZ_cwgi2keYK2NvA0Dq9hDUz9J8AzrlPmlCQj1j0/htmlview?pru=AAABfv9J0k4*zqWpF2bl051VYUbDDytqug#",
+                name: "Engravings",
+              },
+              {
+                url: "https://docs.google.com/spreadsheets/d/1N4Dpo-Z_BPiMNaaVgVx0EGtWB7AMKOUEK-RGDwCzJTE/edit?usp=sharing",
+                name: "Currency",
+              },
+            ],
+            type: "menu",
+            menuName: "Docs",
+            backgroundColor: Colors.light_blue(2),
           },
         ],
       },
@@ -333,7 +358,7 @@ export const STARTPAGE: StartPageLinks[] = [
   {
     tabName: "Mobile",
     linkGroups: [
-      {
+     /* {
         jsonKey: "gfl",
         groupName: "Girls' Frontline",
         urlGroups: [
@@ -441,7 +466,7 @@ export const STARTPAGE: StartPageLinks[] = [
           },
         ],
       },
-      /*{
+      {
         jsonKey: "fgo",
         groupName: "Fate Grand Order",
         urlGroups: [
@@ -478,7 +503,7 @@ export const STARTPAGE: StartPageLinks[] = [
             type: "link",
           },
         ],
-      },*/
+      },
       {
         jsonKey: "priconne",
         groupName: "Princess Connect",
@@ -528,7 +553,7 @@ export const STARTPAGE: StartPageLinks[] = [
             type: "link",
           },
         ],
-      },
+      },*/
       {
         jsonKey: "e7",
         groupName: "Epic Seven",

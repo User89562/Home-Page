@@ -32,13 +32,14 @@ export class RendererUtil {
       let path = "";
 
       if (jsonKeys.includes(element.jsonKey)) {
+        
         links = jsonData[element.jsonKey];
         path = mediaType + "/" + jsonSet + "/";
       } else {
         // if key isn't found in the jsonSet go to the default image set
         const data = this.jsonUtil.getDefaultSet();
         links = data[element.jsonKey];
-        path = "image/default";
+        path = "image/default/";
       }
 
       bgs.push(
@@ -52,7 +53,6 @@ export class RendererUtil {
         )
       );
     });
-    console.log(bgs);
     return bgs;
   }
 
@@ -75,7 +75,7 @@ export class RendererUtil {
           // if key isn't found in the jsonSet go to the default image set
           const data = this.jsonUtil.getDefaultSet();
           linkGroupImages = data[linkGroup.jsonKey];
-          path = "image/default";
+          path = "image/default/";
         }
         let ranNumber = this.randomNumber(
           linkGroupImages?.length!,

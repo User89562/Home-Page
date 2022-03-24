@@ -70,6 +70,8 @@ export class SettingsComponent implements OnInit {
       this.settingsUtil.removeLinkgroupStorage();
     }
 
+    console.log(formValues.background);
+
     this.settingsUtil.setTabBackgroundSettings(formValues.background);
     this.settingsUtil.setLinkgroupSettings(formValues.linkGroup);
     return true;
