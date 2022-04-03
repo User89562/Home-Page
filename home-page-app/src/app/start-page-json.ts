@@ -187,7 +187,7 @@ export const STARTPAGE: StartPageLinks[] = [
     ],
   },
   {
-    tabName: "PC",
+    tabName: "Games",
     linkGroups: [
       {
         jsonKey: "lostark",
@@ -321,6 +321,7 @@ export const STARTPAGE: StartPageLinks[] = [
           },
         ],
       },
+      /*
       {
         jsonKey: "leagueoflegends",
         groupName: "League of Legends",
@@ -352,13 +353,8 @@ export const STARTPAGE: StartPageLinks[] = [
             type: "link",
           },
         ],
-      },
-    ],
-  },
-  {
-    tabName: "Mobile",
-    linkGroups: [
-     /* {
+      },*/
+      {
         jsonKey: "gfl",
         groupName: "Girls' Frontline",
         urlGroups: [
@@ -466,7 +462,7 @@ export const STARTPAGE: StartPageLinks[] = [
           },
         ],
       },
-      {
+      /*{
         jsonKey: "fgo",
         groupName: "Fate Grand Order",
         urlGroups: [
@@ -553,7 +549,7 @@ export const STARTPAGE: StartPageLinks[] = [
             type: "link",
           },
         ],
-      },*/
+      },
       {
         jsonKey: "e7",
         groupName: "Epic Seven",
@@ -612,6 +608,8 @@ export const STARTPAGE: StartPageLinks[] = [
           },
         ],
       },
+      
+      */
       {
         jsonKey: "bluearchive",
         groupName: "Blue Archive",

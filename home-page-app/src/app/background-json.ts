@@ -9,7 +9,7 @@ export const BACKGROUND_MEDIA: BackgroundMedia[] = [
         jsonKey: 'backgrounds'
     },
     {
-        tabIndex: 4,
-        jsonKey: 'backgrounds-t4'
+        tabIndex: 3,
+        jsonKey: 'backgrounds-t3'
     }
 ];
