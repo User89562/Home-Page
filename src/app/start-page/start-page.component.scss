@@ -30,7 +30,7 @@
 .url-link, .menu-button{
     display:inline-block;
     width: 100%;
-    height: 100%;
+    height: 40px;
     min-width: 105px;
     text-align: center;
     font-size: 25px;
@@ -45,13 +45,13 @@
 .url-group-container {
     flex-grow: 1;
     margin: 5px;
-    padding: 5px;
+    padding-top: 5px;
 }
 
 .content-container {
     position:absolute;
     top: 0;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 

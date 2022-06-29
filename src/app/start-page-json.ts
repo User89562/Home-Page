@@ -110,7 +110,7 @@ export const STARTPAGE: StartPageLinks[] = [
         jsonKey: "root",
         urlGroups: [
           {
-            urls: [{ url: "http://192.168.1.15:8090", name: "Downloader" }],
+            urls: [{ url: "http://192.168.1.139:8090", name: "Downloader" }],
             type: "link",
             backgroundColor: Colors.indigo(1),
           },
@@ -119,7 +119,7 @@ export const STARTPAGE: StartPageLinks[] = [
             type: "link",
           },
           {
-            urls: [{ url: "http://192.168.1.15:8081", name: "Git Lab" }],
+            urls: [{ url: "http://192.168.1.139", name: "Git Lab" }],
             type: "link",
           },
         ],
@@ -200,18 +200,41 @@ export const STARTPAGE: StartPageLinks[] = [
             type: "link",
           },
           {
+            urls: [{ url: "https://ark.bynn.kr/home", name: "To-Do" }],
+            type: "link",
+            backgroundColor: Colors.indigo(1),
+          },
+          {
             urls: [
               {
-                url: "https://lostarkdatabase.com/wiki/index.php?title=Main_Page",
-                name: "Wiki",
+                url: "https://lostmerchants.com/",
+                name: "Merchants",
               },
             ],
             type: "link",
           },
           {
-            urls: [{ url: "https://papunika.com/", name: "Papunika" }],
+            urls: [
+              {
+                url: "https://loa-todo.com/engrave",
+                name: "Engraving Planner",
+              },
+              {
+                url: "https://lostark.meta-game.gg/ability-stone-calculator",
+                name: "Ability Stone Cal",
+              },
+              {
+                url: "https://www.mococo.gg/alpha-stone",
+                name: "Ability Stone Cal 2",
+              },
+              {
+                url: "https://lost-ark.maxroll.gg/upgrade-calculator",
+                name: "Honing Cal",
+              },
+            ],
+            type: "menu",
+            menuName: "Tools",
             backgroundColor: Colors.teal(2),
-            type: "link",
           },
           {
             urls: [{ url: "https://lost-ark.maxroll.gg/", name: "Maxroll" }],
@@ -230,7 +253,15 @@ export const STARTPAGE: StartPageLinks[] = [
               },
               {
                 url: "https://docs.google.com/spreadsheets/d/1N4Dpo-Z_BPiMNaaVgVx0EGtWB7AMKOUEK-RGDwCzJTE/edit?usp=sharing",
-                name: "Currency",
+                name: "Currency Exchange",
+              },
+              {
+                url: "https://docs.google.com/spreadsheets/d/1Xz8pDmhzbYKjwCeEpD26_rOeV1QTxm45xYDlTrcDggQ/edit?usp=sharing",
+                name: "Mari Shop Cal",
+              },
+              {
+                url: "https://docs.google.com/spreadsheets/d/11hAUi2OUd4aJR5IRvFwyUlq7VDPMS_brFFGWRLitxqU/edit?usp=sharing",
+                name: "Boss Mechanics",
               },
             ],
             type: "menu",
@@ -668,6 +699,64 @@ export const STARTPAGE: StartPageLinks[] = [
               },
             ],
             type: "link",
+          },
+        ],
+      },
+      {
+        jsonKey: "counterside",
+        groupName: "CounterSide",
+        urlGroups: [
+          {
+            urls: [
+              {
+                url: "https://old.reddit.com/r/CounterSide/",
+                name: "Reddit SEA",
+              },
+            ],
+            type: "link",
+            backgroundColor: Colors.red(1),
+          },
+          {
+            urls: [
+              {
+                url: "https://old.reddit.com/r/CounterSideGlobal/",
+                name: "Reddit Global",
+              },
+            ],
+            type: "link",
+            backgroundColor: Colors.red(1),
+          },
+          {
+            urls: [
+              {
+                url: "https://www.prydwen.co/tier-list",
+                name: "Tier",
+              },
+            ],
+            type: "link",
+          },
+          {
+            urls: [
+              {
+                url: "https://www.prydwen.co/guides",
+                name: "Guides",
+              },
+            ],
+            type: "link",
+          },
+          {
+            urls: [
+              {
+                url: "https://docs.google.com/document/d/1KkxbQhrvAlpqF3h15j_PCCxxBDONTWXU1um9ahGNJHA/edit",
+                name: "Branch Building",
+              },
+              {
+                url: "https://docs.google.com/spreadsheets/d/1oD-E1EB_ayD7ZCuZDJeNgrayQr770qQSn6DGqnCZJwk/edit#gid=1252905051",
+                name: "Event Timeline",
+              },
+            ],
+            type: "menu",
+            menuName: "Docs",
           },
         ],
       },
