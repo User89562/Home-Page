@@ -110,7 +110,7 @@ export const STARTPAGE: StartPageLinks[] = [
         jsonKey: "root",
         urlGroups: [
           {
-            urls: [{ url: "http://192.168.1.139:8090", name: "Downloader" }],
+            urls: [{ url: "http://192.168.1.139:8095", name: "Downloader" }],
             type: "link",
             backgroundColor: Colors.indigo(1),
           },
@@ -267,6 +267,12 @@ export const STARTPAGE: StartPageLinks[] = [
             type: "menu",
             menuName: "Docs",
             backgroundColor: Colors.light_blue(2),
+          },
+          {
+            urls: [
+              { url: "https://forums.playlostark.com/g/Developer/activity/posts", name: "Forums" },
+            ],
+            type: "link",
           },
         ],
       },
