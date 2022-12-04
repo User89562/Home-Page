@@ -1,6 +1,6 @@
 import { EnumUtil } from "./../utils/enum-util";
 import { Component, OnInit } from "@angular/core";
-import { FormBuilder, FormGroup } from "@angular/forms";
+import { FormBuilder, FormControl, FormGroup } from "@angular/forms";
 import { SettingsUtil } from "../utils/settings-util";
 import { SettingsForm } from "../entities/settings";
 
@@ -42,19 +42,19 @@ export class SettingsComponent implements OnInit {
       jsonSet: this.settingsUtil.getLgJsonSet(),
       mediaType: this.settingsUtil.getLgMediaType(),
     });
-    this.oSettings = this.settingsForm.value;
+    this.oSettings != this.settingsForm.value;
   }
 
-  get bgJsonSet(): FormGroup {
-    return this.settingsForm.get("background")?.get("jsonSet") as FormGroup;
+  get bgJsonSet(): FormControl {
+    return this.settingsForm.get("background")?.get("jsonSet") as FormControl;
   }
 
-  get lgJsonSet(): FormGroup {
-    return this.settingsForm.get("linkGroup")?.get("jsonSet") as FormGroup;
+  get lgJsonSet(): FormControl {
+    return this.settingsForm.get("linkGroup")?.get("jsonSet") as FormControl;
   }
 
   saveUserSettings(): boolean {
-    const formValues: SettingsForm = this.settingsForm.value;
+    const formValues: any = this.settingsForm.value;
 
     if (
       formValues.background.mediaType != this.oSettings.background.mediaType ||

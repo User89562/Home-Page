@@ -1,9 +1,14 @@
-<div *ngIf="determineType();else video">
-  <img [src]="media" class="background-image">
+<div *ngIf="determineType(); else video">
+  <img [src]="media" class="background-image" />
   <!--<app-start-page></app-start-page>-->
 </div>
 <ng-template #video>
-  <video autoplay="autoplay" [muted]="'muted'"class="background-video" (ended)="loopVideo($event)" [src]="media" type="video/mp4">
-  </video> 
+  <video
+    autoplay="autoplay"
+    [muted]="'muted'"
+    class="background-video"
+    (ended)="loopVideo($event)"
+    [src]="media"
+    type="video/mp4"
+  ></video>
 </ng-template>
-

@@ -276,7 +276,7 @@ export const STARTPAGE: StartPageLinks[] = [
           },
         ],
       },
-      {
+     /* {
         jsonKey: "genshin",
         groupName: "Genshin Impact",
         urlGroups: [
@@ -357,7 +357,7 @@ export const STARTPAGE: StartPageLinks[] = [
             type: "link",
           },
         ],
-      },
+      },*/
       /*
       {
         jsonKey: "leagueoflegends",
@@ -391,7 +391,7 @@ export const STARTPAGE: StartPageLinks[] = [
           },
         ],
       },*/
-      {
+     /* {
         jsonKey: "gfl",
         groupName: "Girls' Frontline",
         urlGroups: [
@@ -499,7 +499,7 @@ export const STARTPAGE: StartPageLinks[] = [
           },
         ],
       },
-      /*{
+      {
         jsonKey: "fgo",
         groupName: "Fate Grand Order",
         urlGroups: [
@@ -735,7 +735,7 @@ export const STARTPAGE: StartPageLinks[] = [
           {
             urls: [
               {
-                url: "https://www.prydwen.co/tier-list",
+                url: "https://www.prydwen.gg/counter-side/tier-list",
                 name: "Tier",
               },
             ],
@@ -744,7 +744,7 @@ export const STARTPAGE: StartPageLinks[] = [
           {
             urls: [
               {
-                url: "https://www.prydwen.co/guides",
+                url: "https://www.prydwen.gg/counter-side/guides/",
                 name: "Guides",
               },
             ],
@@ -870,6 +870,94 @@ export const STARTPAGE: StartPageLinks[] = [
                 url: "https://slaimuda.github.io/ectl/#/home",
                 name: "Tier List",
               },
+            ],
+            type: "link",
+            backgroundColor: Colors.light_blue(1),
+          },
+        ],
+      },
+
+      {
+        jsonKey: "nikke",
+        groupName: "Nikke",
+        urlGroups: [
+          {
+            urls: [
+              { url: "https://old.reddit.com/r/NikkeMobile/", name: "Reddit" },
+            ],
+            type: "link",
+            backgroundColor: Colors.red(1),
+          },
+          {
+            urls: [
+              {
+                url: "https://www.prydwen.gg/nikke/guides/",
+                name: "Guides",
+              },
+            ],
+            type: "link",
+            backgroundColor: Colors.purple(0),
+          },
+          {
+            urls: [
+              {
+                url: "https://www.prydwen.gg/nikke/tier-list/",
+                name: "Tier List",
+              },
+            ],
+            type: "link",
+            backgroundColor: Colors.light_blue(1),
+          },
+          {
+            urls: [
+              {
+                url: "https://nikke.gg/guides/",
+                name: "Guides 2",
+              },
+            ],
+            type: "link",
+            backgroundColor: Colors.purple(1),
+          },
+          {
+            urls: [
+              {
+                url: "https://nikke.gg/tier-list/",
+                name: "Tier List 2",
+              },
+            ],
+            type: "link",
+            backgroundColor: Colors.purple(1),
+          },
+        ],
+      },
+      {
+        jsonKey: "root",
+        groupName: "Misc",
+        urlGroups: [
+          {
+            urls: [
+              { url: "https://user89562.github.io/venus-arch/", name: "Hydrus Web Viewer" },
+            ],
+            type: "link",
+            backgroundColor: Colors.red(1),
+          },
+          {
+            urls: [
+              { url: "http://127.0.0.1:7860/", name: "Stable Diffusion Web Ui" },
+            ],
+            type: "link",
+            backgroundColor: Colors.teal(1),
+          },
+          {
+            urls: [
+              { url: "https://github.com/AUTOMATIC1111/stable-diffusion-webui", name: "Web Ui Github" },
+            ],
+            type: "link",
+            backgroundColor: Colors.teal(1),
+          },
+          {
+            urls: [
+              { url: "https://rentry.org/voldy", name: "AI Guides" },
             ],
             type: "link",
             backgroundColor: Colors.light_blue(1),
