@@ -159,6 +159,16 @@ export const STARTPAGE: StartPageLinks[] = [
       },
       {
         jsonKey: "root",
+        groupName: "Godot",
+        urlGroups: [
+          {
+            urls: [{ url: "https://docs.godotengine.org/en/stable/index.html", name: "Documentation" }],
+            type: "link",
+          },
+        ],
+      },
+      {
+        jsonKey: "root",
         urlGroups: [
           {
             urls: [
@@ -200,10 +210,12 @@ export const STARTPAGE: StartPageLinks[] = [
             type: "link",
           },
           {
-            urls: [{ url: "https://ark.bynn.kr/home", name: "To-Do" }],
+            urls: [
+              { url: "https://forums.playlostark.com/g/Developer/activity/posts", name: "Forums" },
+            ],
             type: "link",
-            backgroundColor: Colors.indigo(1),
           },
+
           {
             urls: [
               {
@@ -248,16 +260,8 @@ export const STARTPAGE: StartPageLinks[] = [
                 name: "Santione Index",
               },
               {
-                url: "https://docs.google.com/spreadsheets/d/1JgPTZ_cwgi2keYK2NvA0Dq9hDUz9J8AzrlPmlCQj1j0/htmlview?pru=AAABfv9J0k4*zqWpF2bl051VYUbDDytqug#",
-                name: "Engravings",
-              },
-              {
                 url: "https://docs.google.com/spreadsheets/d/1N4Dpo-Z_BPiMNaaVgVx0EGtWB7AMKOUEK-RGDwCzJTE/edit?usp=sharing",
                 name: "Currency Exchange",
-              },
-              {
-                url: "https://docs.google.com/spreadsheets/d/1Xz8pDmhzbYKjwCeEpD26_rOeV1QTxm45xYDlTrcDggQ/edit?usp=sharing",
-                name: "Mari Shop Cal",
               },
               {
                 url: "https://docs.google.com/spreadsheets/d/11hAUi2OUd4aJR5IRvFwyUlq7VDPMS_brFFGWRLitxqU/edit?usp=sharing",
@@ -270,13 +274,83 @@ export const STARTPAGE: StartPageLinks[] = [
           },
           {
             urls: [
-              { url: "https://forums.playlostark.com/g/Developer/activity/posts", name: "Forums" },
+              {
+                url: "https://docs.google.com/document/d/1Dr4egW6_YR7JGkukK-pbPXg3ckbfE31iuMxOSSudD64/edit",
+                name: "Gunslinger",
+              },
+              {
+                url: "https://docs.google.com/document/d/1hgR9_xMPaB95NUPgEx0hwgE9vjAQQCeVK6S74ZDnR58/edit#",
+                name: "Bard",
+              },
+              {
+                url: "https://docs.google.com/document/d/1EsAOOw-QXbq5NiPxeAISsII3zE6ZSgyq1WIVgZ8-q7U/edit",
+                name: "Reaper",
+              },
+              {
+                url: "https://docs.google.com/document/d/1MWWgdrTIJBj0WXmAqE4DspVobgMlDx4aaI7ZwCj1-AM/edit",
+                name: "Arcana",
+              },
+              {
+                url: "https://docs.google.com/document/d/12IcR8HrywQQhhThnGZxz-Gsq4KryrT5aKggGcgkX9bA/edit",
+                name: "Soulfist",
+              },
+              {
+                url: "https://docs.google.com/document/d/1OlCBWkiQRt0odr6BoOotxTpzhDcoEAicv8vJdzJIViI/edit",
+                name: "Artist",
+              },
+              {
+                url: "https://docs.google.com/document/d/1AiPHCB1oa56fM-l0B8ao-11-JYAdiA3qFtS339Dg3dQ/edit",
+                name: "Aeromancer",
+              },
+            ],
+            type: "menu",
+            menuName: "Class",
+            backgroundColor: Colors.light_blue(1),
+          },
+          {
+            urls: [{ url: "https://ark.bynn.kr/to-do", name: "To-Do" }],
+            type: "link",
+            backgroundColor: Colors.indigo(1),
+          },
+          
+        ],
+      },/*
+      {
+        jsonKey: "gfl",
+        groupName: "Neural Cloud",
+        urlGroups: [
+          {
+            urls: [
+              {
+                url: "https://old.reddit.com/r/GFLNeuralCloud/",
+                name: "Reddit",
+              },
+            ],
+            type: "link",
+            backgroundColor: Colors.red(1),
+          },
+          {
+            urls: [
+              {
+                url: "https://nalu.wiki/neuralcloud",
+                name: "Wiki",
+              },
             ],
             type: "link",
           },
+          {
+            urls: [
+              {
+                url: "https://docs.google.com/spreadsheets/d/1oNBX0zZdaNsGYwxA6cxvh58X6nvUSlcaKf9lTmjF6Yg/edit#gid=4312925",
+                name: "Tier List",
+              },
+            ],
+            type: "link",
+            backgroundColor: Colors.light_blue(2),
+          },
         ],
-      },
-     /* {
+      },*/
+      {
         jsonKey: "genshin",
         groupName: "Genshin Impact",
         urlGroups: [
@@ -357,7 +431,48 @@ export const STARTPAGE: StartPageLinks[] = [
             type: "link",
           },
         ],
-      },*/
+      },
+      {
+        jsonKey: "starrail",
+        groupName: "Honkai: Star Rail",
+        urlGroups: [
+          {
+            urls: [
+              {
+                url: "https://old.reddit.com/r/HonkaiStarRail/",
+                name: "Reddit",
+              },
+            ],
+            type: "link",
+          },
+          {
+            urls: [
+              {
+                url: "https://old.reddit.com/r/HonkaiStarRailLeaks/",
+                name: "Reddit Leaks",
+              },
+            ],
+            type: "link",
+          },
+          {
+            urls: [
+              {
+                url: "https://www.prydwen.gg/star-rail/tier-list/",
+                name: "Prydwen",
+              },
+              {
+                url: "https://honkai.gg/tierlist",
+                name: "Honaki.gg",
+              },
+
+            ],
+            type: "menu",
+            menuName: "Tier Lists",
+            backgroundColor: Colors.light_blue(2),
+          },
+        ],
+      },
+
       /*
       {
         jsonKey: "leagueoflegends",
@@ -646,7 +761,7 @@ export const STARTPAGE: StartPageLinks[] = [
         ],
       },
       
-      */
+      *//*
       {
         jsonKey: "bluearchive",
         groupName: "Blue Archive",
@@ -765,6 +880,78 @@ export const STARTPAGE: StartPageLinks[] = [
             menuName: "Docs",
           },
         ],
+      },*/
+      {
+        jsonKey: "nikke",
+        groupName: "Nikke",
+        urlGroups: [
+          {
+            urls: [
+              { url: "https://old.reddit.com/r/NikkeMobile/", name: "Reddit" },
+            ],
+            type: "link",
+            backgroundColor: Colors.red(1),
+          },
+          {
+            urls: [
+              {
+                url: "https://www.prydwen.gg/nikke/guides/",
+                name: "Guides",
+              },
+              {
+                url: "https://www.prydwen.gg/nikke/tier-list/",
+                name: "Tier List",
+              },
+            ],
+            type: "menu",
+            menuName: "Prydwen",
+            backgroundColor: Colors.teal(2),
+          },
+          {
+            urls: [
+              {
+                url: "https://nikke.gg/guides/",
+                name: "Guides",
+              },
+              {
+                url: "https://nikke.gg/tier-list/",
+                name: "Tier List",
+              },
+              {
+                url: "https://nikke.gg/interception-overview/",
+                name: "Interception",
+              },
+              {
+                url: "https://nikke.gg/skill-priority-guide/",
+                name: "Skill Prio",
+              },
+            ],
+            type: "menu",
+            menuName: "Nikke.gg",
+            backgroundColor: Colors.purple(1),
+          },
+ 
+          {
+            urls: [
+              {
+                url: "https://nikke.gg/guides/",
+                name: "Guides 2",
+              },
+            ],
+            type: "link",
+            backgroundColor: Colors.purple(1),
+          },
+          {
+            urls: [
+              {
+                url: "https://nikke.gg/tier-list/",
+                name: "Tier List 2",
+              },
+            ],
+            type: "link",
+            backgroundColor: Colors.purple(1),
+          },
+        ],
       },
       {
         jsonKey: "root",
@@ -857,7 +1044,7 @@ export const STARTPAGE: StartPageLinks[] = [
           {
             urls: [
               {
-                url: "https://azurlane.koumakan.jp/Azur_Lane_Wiki",
+                url: "https://azurlane.koumakan.jp/wiki/Azur_Lane_Wiki",
                 name: "Wiki",
               },
             ],
@@ -877,59 +1064,7 @@ export const STARTPAGE: StartPageLinks[] = [
         ],
       },
 
-      {
-        jsonKey: "nikke",
-        groupName: "Nikke",
-        urlGroups: [
-          {
-            urls: [
-              { url: "https://old.reddit.com/r/NikkeMobile/", name: "Reddit" },
-            ],
-            type: "link",
-            backgroundColor: Colors.red(1),
-          },
-          {
-            urls: [
-              {
-                url: "https://www.prydwen.gg/nikke/guides/",
-                name: "Guides",
-              },
-            ],
-            type: "link",
-            backgroundColor: Colors.purple(0),
-          },
-          {
-            urls: [
-              {
-                url: "https://www.prydwen.gg/nikke/tier-list/",
-                name: "Tier List",
-              },
-            ],
-            type: "link",
-            backgroundColor: Colors.light_blue(1),
-          },
-          {
-            urls: [
-              {
-                url: "https://nikke.gg/guides/",
-                name: "Guides 2",
-              },
-            ],
-            type: "link",
-            backgroundColor: Colors.purple(1),
-          },
-          {
-            urls: [
-              {
-                url: "https://nikke.gg/tier-list/",
-                name: "Tier List 2",
-              },
-            ],
-            type: "link",
-            backgroundColor: Colors.purple(1),
-          },
-        ],
-      },
+     
       {
         jsonKey: "root",
         groupName: "Misc",
@@ -940,6 +1075,15 @@ export const STARTPAGE: StartPageLinks[] = [
             ],
             type: "link",
             backgroundColor: Colors.red(1),
+          },
+          {
+            urls: [
+              { url: "https://github.com/AUTOMATIC1111/stable-diffusion-webui", name: "Automatic Main" },
+              { url: "https://github.com/vladmandic/automatic", name: "Vlad Fork" },
+            ],
+            type: "menu",
+            menuName: "Github Repos",
+            backgroundColor: Colors.teal(1),
           },
           {
             urls: [
@@ -958,8 +1102,10 @@ export const STARTPAGE: StartPageLinks[] = [
           {
             urls: [
               { url: "https://rentry.org/voldy", name: "AI Guides" },
+              { url: "https://www.sdcompendium.com/doku.php?id=weekly_news_0093", name: "SD Compendium" },
             ],
-            type: "link",
+            type: "menu",
+            menuName: "Info",
             backgroundColor: Colors.light_blue(1),
           },
         ],

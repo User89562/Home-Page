@@ -113,5 +113,8 @@
       }
     }
   },
-  "defaultProject": "home-page-app"
+  "defaultProject": "home-page-app",
+  "cli": {
+    "analytics": false
+  }
 }
