@@ -211,7 +211,7 @@ export const STARTPAGE: StartPageLinks[] = [
           },
           {
             urls: [
-              { url: "https://forums.playlostark.com/g/Developer/activity/posts", name: "Forums" },
+              { url: "https://www.lostarkmarket.online/north-america-east/crafting/special/fusion-material/superior-oreha-fusion-material-4-2", name: "Market" },
             ],
             type: "link",
           },
@@ -232,15 +232,11 @@ export const STARTPAGE: StartPageLinks[] = [
                 name: "Engraving Planner",
               },
               {
-                url: "https://lostark.meta-game.gg/ability-stone-calculator",
-                name: "Ability Stone Cal",
-              },
-              {
                 url: "https://www.mococo.gg/alpha-stone",
                 name: "Ability Stone Cal 2",
               },
               {
-                url: "https://lost-ark.maxroll.gg/upgrade-calculator",
+                url: "https://maxroll.gg/lost-ark/upgrade-calculator",
                 name: "Honing Cal",
               },
             ],
@@ -249,16 +245,12 @@ export const STARTPAGE: StartPageLinks[] = [
             backgroundColor: Colors.teal(2),
           },
           {
-            urls: [{ url: "https://lost-ark.maxroll.gg/", name: "Maxroll" }],
+            urls: [{ url: "https://maxroll.gg/lost-ark", name: "Maxroll" }],
             type: "link",
             backgroundColor: Colors.light_blue(1),
           },
           {
             urls: [
-              {
-                url: "https://docs.google.com/document/d/1rjP396p9taznSydWyVX_d-Rnoas8aWYJv69e5JyXF2g/edit",
-                name: "Santione Index",
-              },
               {
                 url: "https://docs.google.com/spreadsheets/d/1N4Dpo-Z_BPiMNaaVgVx0EGtWB7AMKOUEK-RGDwCzJTE/edit?usp=sharing",
                 name: "Currency Exchange",
@@ -266,6 +258,18 @@ export const STARTPAGE: StartPageLinks[] = [
               {
                 url: "https://docs.google.com/spreadsheets/d/11hAUi2OUd4aJR5IRvFwyUlq7VDPMS_brFFGWRLitxqU/edit?usp=sharing",
                 name: "Boss Mechanics",
+              },
+              {
+                url: "https://docs.google.com/spreadsheets/d/1zI7Wtggb2ZyFnN_S1Ht5Sv1giQBOk_tFQ1EbkZsXbPw/edit?usp=sharing",
+                name: "Tracking",
+              },
+              {
+                url: "https://docs.google.com/spreadsheets/d/1QcnJXKFzTNdyCOWA5CWzbLFiBlRGA_hJhxUvUXuAP6E/edit#gid=207129209",
+                name: "Raid/Bus",
+              },
+              {
+                url: "https://docs.google.com/spreadsheets/d/1YQpWt8iOK6yO5_7r3rvZZKkoRy8Z0aEAPHy11gYZZQ8/edit#gid=692731892",
+                name: "Raid Loot",
               },
             ],
             type: "menu",
@@ -275,43 +279,68 @@ export const STARTPAGE: StartPageLinks[] = [
           {
             urls: [
               {
-                url: "https://docs.google.com/document/d/1Dr4egW6_YR7JGkukK-pbPXg3ckbfE31iuMxOSSudD64/edit",
-                name: "Gunslinger",
+                
+                url: "https://www.lostark.nexus/",
+                name: "Community Guides",
               },
               {
-                url: "https://docs.google.com/document/d/1hgR9_xMPaB95NUPgEx0hwgE9vjAQQCeVK6S74ZDnR58/edit#",
-                name: "Bard",
-              },
-              {
-                url: "https://docs.google.com/document/d/1EsAOOw-QXbq5NiPxeAISsII3zE6ZSgyq1WIVgZ8-q7U/edit",
-                name: "Reaper",
+                url: "https://docs.google.com/document/d/1AiPHCB1oa56fM-l0B8ao-11-JYAdiA3qFtS339Dg3dQ/edit",
+                name: "Aeromancer",
               },
               {
                 url: "https://docs.google.com/document/d/1MWWgdrTIJBj0WXmAqE4DspVobgMlDx4aaI7ZwCj1-AM/edit",
                 name: "Arcana",
               },
               {
-                url: "https://docs.google.com/document/d/12IcR8HrywQQhhThnGZxz-Gsq4KryrT5aKggGcgkX9bA/edit",
-                name: "Soulfist",
-              },
-              {
                 url: "https://docs.google.com/document/d/1OlCBWkiQRt0odr6BoOotxTpzhDcoEAicv8vJdzJIViI/edit",
                 name: "Artist",
               },
               {
-                url: "https://docs.google.com/document/d/1AiPHCB1oa56fM-l0B8ao-11-JYAdiA3qFtS339Dg3dQ/edit",
-                name: "Aeromancer",
+                url: "https://docs.google.com/document/d/1hgR9_xMPaB95NUPgEx0hwgE9vjAQQCeVK6S74ZDnR58/edit#",
+                name: "Bard",
               },
+              {
+                url: "https://docs.google.com/document/d/1ZLOhLB9bb9AN_Q7_eKukUnqI5E5w5Fb1oqryIA1ml8A/edit?usp=sharing",
+                name: "Deathblade",
+              },
+              {
+                url: "https://docs.google.com/document/d/1Dr4egW6_YR7JGkukK-pbPXg3ckbfE31iuMxOSSudD64/edit",
+                name: "Gunslinger",
+              },
+              {
+                url: "https://docs.google.com/document/d/1EsAOOw-QXbq5NiPxeAISsII3zE6ZSgyq1WIVgZ8-q7U/edit",
+                name: "Reaper",
+              },
+              {
+                url: "https://docs.google.com/document/d/1Da0MFsuencYbmcFMo6cUPBEGubavgsebeYtR7iCtaoQ/edit#heading=h.rkp1tcuxru48",
+                name: "Souleater",
+              }, 
+              {
+                url: "https://docs.google.com/document/d/1hZuP7TRwvaNDBnt7QKZJB-TdJLKvgtRdxhQr104l5Qg/edit",
+                name: "Slayer",
+              },              
+              {
+                url: "https://docs.google.com/document/d/12IcR8HrywQQhhThnGZxz-Gsq4KryrT5aKggGcgkX9bA/edit",
+                name: "Soulfist",
+              },
+              
+              
+              
             ],
             type: "menu",
             menuName: "Class",
             backgroundColor: Colors.light_blue(1),
           },
           {
-            urls: [{ url: "https://ark.bynn.kr/to-do", name: "To-Do" }],
+            urls: [{ url: "https://lostark-helper.com/checklist", name: "To-Do" }],
             type: "link",
             backgroundColor: Colors.indigo(1),
           },
+          /*{
+            urls: [{ url: "https://ark.bynn.kr/to-do", name: "To-Do" }],
+            type: "link",
+            backgroundColor: Colors.indigo(1),
+          },*/
           
         ],
       },/*
@@ -350,7 +379,7 @@ export const STARTPAGE: StartPageLinks[] = [
           },
         ],
       },*/
-      {
+      /*{
         jsonKey: "genshin",
         groupName: "Genshin Impact",
         urlGroups: [
@@ -431,7 +460,7 @@ export const STARTPAGE: StartPageLinks[] = [
             type: "link",
           },
         ],
-      },
+      },*/
       {
         jsonKey: "starrail",
         groupName: "Honkai: Star Rail",
@@ -448,8 +477,26 @@ export const STARTPAGE: StartPageLinks[] = [
           {
             urls: [
               {
-                url: "https://old.reddit.com/r/HonkaiStarRailLeaks/",
+                url: "https://old.reddit.com/r/HonkaiStarRail_leaks/",
                 name: "Reddit Leaks",
+              },
+            ],
+            type: "link",
+          },
+          {
+            urls: [
+              {
+                url: "https://act.hoyolab.com/sr/app/interactive-map/index.html",
+                name: "Map",
+              },
+            ],
+            type: "link",
+          },
+          {
+            urls: [
+              {
+                url: "https://act.hoyolab.com/bbs/event/signin/hkrpg/index.html?act_id=e202303301540311&hyl_auth_required=true&hyl_presentation_style=fullscreen&lang=en&plat_type=pc",
+                name: "Checkin",
               },
             ],
             type: "link",
@@ -460,11 +507,6 @@ export const STARTPAGE: StartPageLinks[] = [
                 url: "https://www.prydwen.gg/star-rail/tier-list/",
                 name: "Prydwen",
               },
-              {
-                url: "https://honkai.gg/tierlist",
-                name: "Honaki.gg",
-              },
-
             ],
             type: "menu",
             menuName: "Tier Lists",
@@ -760,8 +802,8 @@ export const STARTPAGE: StartPageLinks[] = [
           },
         ],
       },
+      */
       
-      *//*
       {
         jsonKey: "bluearchive",
         groupName: "Blue Archive",
@@ -823,6 +865,7 @@ export const STARTPAGE: StartPageLinks[] = [
           },
         ],
       },
+      /*
       {
         jsonKey: "counterside",
         groupName: "CounterSide",
@@ -881,7 +924,7 @@ export const STARTPAGE: StartPageLinks[] = [
           },
         ],
       },*/
-      {
+      /*{
         jsonKey: "nikke",
         groupName: "Nikke",
         urlGroups: [
@@ -930,29 +973,8 @@ export const STARTPAGE: StartPageLinks[] = [
             menuName: "Nikke.gg",
             backgroundColor: Colors.purple(1),
           },
- 
-          {
-            urls: [
-              {
-                url: "https://nikke.gg/guides/",
-                name: "Guides 2",
-              },
-            ],
-            type: "link",
-            backgroundColor: Colors.purple(1),
-          },
-          {
-            urls: [
-              {
-                url: "https://nikke.gg/tier-list/",
-                name: "Tier List 2",
-              },
-            ],
-            type: "link",
-            backgroundColor: Colors.purple(1),
-          },
         ],
-      },
+      },*/
       {
         jsonKey: "root",
         groupName: "Misc",
@@ -1094,19 +1116,19 @@ export const STARTPAGE: StartPageLinks[] = [
           },
           {
             urls: [
-              { url: "https://github.com/AUTOMATIC1111/stable-diffusion-webui", name: "Web Ui Github" },
-            ],
-            type: "link",
-            backgroundColor: Colors.teal(1),
-          },
-          {
-            urls: [
               { url: "https://rentry.org/voldy", name: "AI Guides" },
               { url: "https://www.sdcompendium.com/doku.php?id=weekly_news_0093", name: "SD Compendium" },
             ],
             type: "menu",
             menuName: "Info",
             backgroundColor: Colors.light_blue(1),
+          },
+          {
+            urls: [
+              { url: "https://civitai.com/", name: "Civitai Models" },
+            ],
+            type: "link",
+            backgroundColor: Colors.purple(1),
           },
         ],
       },
