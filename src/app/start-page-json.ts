@@ -40,7 +40,16 @@ export const STARTPAGE: StartPageLinks[] = [
             urls: [
               {
                 url: "https://www.livechart.me/schedule/tv",
-                name: "Anime Season",
+                name: "Livechart",
+              },
+            ],
+            type: "link",
+          },
+          {
+            urls: [
+              {
+                url: "https://myanimelist.net/",
+                name: "MyAnimeList",
               },
             ],
             type: "link",
@@ -110,7 +119,7 @@ export const STARTPAGE: StartPageLinks[] = [
         jsonKey: "root",
         urlGroups: [
           {
-            urls: [{ url: "http://192.168.1.139:8095", name: "Downloader" }],
+            urls: [{ url: "https://192.168.1.139:8095", name: "Downloader" }],
             type: "link",
             backgroundColor: Colors.indigo(1),
           },
@@ -228,16 +237,24 @@ export const STARTPAGE: StartPageLinks[] = [
           {
             urls: [
               {
+                url: "https://cho.elphago.work/en",
+                name: "Transcendence Cal",
+              },
+              {
                 url: "https://loa-todo.com/engrave",
                 name: "Engraving Planner",
+              },
+              {
+                url: "https://maxroll.gg/lost-ark/upgrade-calculator",
+                name: "Honing Cal",
               },
               {
                 url: "https://www.mococo.gg/alpha-stone",
                 name: "Ability Stone Cal 2",
               },
               {
-                url: "https://maxroll.gg/lost-ark/upgrade-calculator",
-                name: "Honing Cal",
+                url: "https://logs.fau.dev/logs",
+                name: "DPS Logs",
               },
             ],
             type: "menu",
@@ -495,6 +512,15 @@ export const STARTPAGE: StartPageLinks[] = [
           {
             urls: [
               {
+                url: "https://homdgcat.wiki/sr/",
+                name: "Leaks Wiki",
+              },
+            ],
+            type: "link",
+          },
+          {
+            urls: [
+              {
                 url: "https://act.hoyolab.com/bbs/event/signin/hkrpg/index.html?act_id=e202303301540311&hyl_auth_required=true&hyl_presentation_style=fullscreen&lang=en&plat_type=pc",
                 name: "Checkin",
               },
@@ -508,11 +534,46 @@ export const STARTPAGE: StartPageLinks[] = [
                 name: "Prydwen",
               },
             ],
-            type: "menu",
-            menuName: "Tier Lists",
+            type: "link",
             backgroundColor: Colors.light_blue(2),
           },
         ],
+      },
+      {
+        jsonKey: "zzz",
+        groupName: "Zenless Zone Zero",
+        urlGroups: [
+          {
+            urls: [
+              { url: "https://old.reddit.com/r/ZZZ_Official/", name: "Reddit" },
+            ],
+            type: "link",
+          },
+          {
+            urls: [
+              { url: "https://www.prydwen.gg/zenless/tier-list", name: "Tier" },
+            ],
+            type: "link",
+          },
+        ]
+      },
+      {
+        jsonKey: "browndust2",
+        groupName: "Brown Dust 2",
+        urlGroups: [
+          {
+            urls: [
+              { url: "https://old.reddit.com/r/BrownDust2Official/", name: "Reddit" },
+            ],
+            type: "link",
+          },
+          {
+            urls: [
+              { url: "https://dotgg.gg/brown-dust-2/", name: "Tier" },
+            ],
+            type: "link",
+          },
+        ]
       },
 
       /*

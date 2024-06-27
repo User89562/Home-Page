@@ -71,8 +71,23 @@
     "NvGx5eC.jpg",
     "XCX2OH6.jpg"
   ],
+  "browndust2": [
+    "bd (1).jpg",
+    "bd (2).jpg",
+    "bd (3).jpg",
+    "bd (4).jpg",
+    "bd (5).jpg",
+    "bd (6).jpg",
+    "bd (7).jpg"
+  ],
   "counterside": [
     "cs (1).png",
+    "cs (10).png",
+    "cs (11).png",
+    "cs (12).png",
+    "cs (13).png",
+    "cs (14).png",
+    "cs (15).png",
     "cs (2).png",
     "cs (3).png",
     "cs (4).png",
@@ -80,22 +95,7 @@
     "cs (6).png",
     "cs (7).png",
     "cs (8).png",
-    "cs (9).png",
-    "cs (10).png",
-    "cs (11).png",
-    "cs (12).png",
-    "cs (13).png",
-    "cs (14).png",
-    "cs (15).png"     
-  ],
-  "nikke": [
-    "nikke (1).png",
-    "nikke (1).jpg",
-    "nikke (2).png",
-    "nikke (2).jpg",
-    "nikke (3).jpg",
-    "nikke (4).jpg",
-    "nikke (3).png" 
+    "cs (9).png"
   ],
   "fgo": [
     "fgo10.png",
@@ -135,12 +135,6 @@
     "genshin7.jpg",
     "genshin8.jpg",
     "genshin9.png"
-  ],
-  "starrail": [
-    "starrail (1).jpg",
-    "starrail (1).png",
-    "starrail (2).png",
-    "starrail (3).png"
   ],
   "gfl": [
     "gfl (1).jpg",
@@ -215,6 +209,15 @@
     "920122.jpg",
     "920126.jpg",
     "920131.jpg"
+  ],
+  "nikke": [
+    "nikke (1).jpg",
+    "nikke (1).png",
+    "nikke (2).jpg",
+    "nikke (2).png",
+    "nikke (3).jpg",
+    "nikke (3).png",
+    "nikke (4).jpg"
   ],
   "root": [
     "pbm3yulltvn51.jpg",
@@ -315,5 +318,12 @@
     "wallhaven-z8zgqw.jpg",
     "wallhaven-z8zjdo.jpg",
     "wallhaven-z8zl6o.jpg"
-  ]
+  ],
+  "starrail": [
+    "starrail (1).jpg",
+    "starrail (1).png",
+    "starrail (2).png",
+    "starrail (3).png"
+  ],
+  "zzz": ["zzz1.jpg", "zzz1.png"]
 }
