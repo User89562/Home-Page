@@ -113,7 +113,6 @@
       }
     }
   },
-  "defaultProject": "home-page-app",
   "cli": {
     "analytics": false
   }

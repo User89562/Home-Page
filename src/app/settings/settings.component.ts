@@ -1,6 +1,6 @@
 import { EnumUtil } from "./../utils/enum-util";
 import { Component, OnInit } from "@angular/core";
-import { FormBuilder, FormControl, FormGroup } from "@angular/forms";
+import { UntypedFormBuilder, UntypedFormControl, FormGroup } from "@angular/forms";
 import { SettingsUtil } from "../utils/settings-util";
 import { SettingsForm } from "../entities/settings";
 
@@ -26,7 +26,7 @@ export class SettingsComponent implements OnInit {
   settingsUtil = new SettingsUtil();
   enumUtil = new EnumUtil();
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: UntypedFormBuilder) {}
 
   ngOnInit() {
     this.settingsUtil.getSettings();
@@ -45,12 +45,12 @@ export class SettingsComponent implements OnInit {
     this.oSettings != this.settingsForm.value;
   }
 
-  get bgJsonSet(): FormControl {
-    return this.settingsForm.get("background")?.get("jsonSet") as FormControl;
+  get bgJsonSet(): UntypedFormControl {
+    return this.settingsForm.get("background")?.get("jsonSet") as UntypedFormControl;
   }
 
-  get lgJsonSet(): FormControl {
-    return this.settingsForm.get("linkGroup")?.get("jsonSet") as FormControl;
+  get lgJsonSet(): UntypedFormControl {
+    return this.settingsForm.get("linkGroup")?.get("jsonSet") as UntypedFormControl;
   }
 
   saveUserSettings(): boolean {
