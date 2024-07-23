@@ -55,13 +55,13 @@
     "background-7.jpg"
   ],
   "backgrounds-t3": [
-    "background-1.jpg",
-    "background-2.jpg",
-    "background-3.jpg",
-    "background-4.jpg",
-    "background-5.jpg",
-    "background-6.jpg",
-    "background-7.jpg"
+    "t3-bg-1.jpg",
+    "t3-bg-2.jpg",
+    "t3-bg-3.jpg",
+    "t3-bg-4.jpg",
+    "t3-bg-5.jpg",
+    "t3-bg-6.jpg",
+    "t3-bg-7.jpg"
   ],
   "bluearchive": [
     "7IBSANk.jpg",
@@ -79,23 +79,6 @@
     "bd (5).jpg",
     "bd (6).jpg",
     "bd (7).jpg"
-  ],
-  "counterside": [
-    "cs (1).png",
-    "cs (10).png",
-    "cs (11).png",
-    "cs (12).png",
-    "cs (13).png",
-    "cs (14).png",
-    "cs (15).png",
-    "cs (2).png",
-    "cs (3).png",
-    "cs (4).png",
-    "cs (5).png",
-    "cs (6).png",
-    "cs (7).png",
-    "cs (8).png",
-    "cs (9).png"
   ],
   "fgo": [
     "fgo10.png",

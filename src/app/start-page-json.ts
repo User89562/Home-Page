@@ -348,16 +348,16 @@ export const STARTPAGE: StartPageLinks[] = [
             menuName: "Class",
             backgroundColor: Colors.light_blue(1),
           },
-          {
+          /*{
             urls: [{ url: "https://lostark-helper.com/checklist", name: "To-Do" }],
             type: "link",
             backgroundColor: Colors.indigo(1),
-          },
-          /*{
+          },*/
+          {
             urls: [{ url: "https://ark.bynn.kr/to-do", name: "To-Do" }],
             type: "link",
             backgroundColor: Colors.indigo(1),
-          },*/
+          },
           
         ],
       },/*
@@ -755,116 +755,7 @@ export const STARTPAGE: StartPageLinks[] = [
           },
         ],
       },
-      {
-        jsonKey: "priconne",
-        groupName: "Princess Connect",
-        urlGroups: [
-          {
-            urls: [
-              { url: "https://old.reddit.com/r/Priconne/", name: "Reddit" },
-            ],
-            type: "link",
-          },
-          {
-            urls: [
-              { url: "https://docs.qq.com/sheet/DWlhOaWJXYnZwVklT?tab=1ztn7s",
-                name: "CB Records", 
-              },
-              {
-                url: "https://docs.google.com/spreadsheets/d/1JXbzIF4dWqzmmBwAxuNp74_v8eSM0tuDehWZtN9-lxY/edit#gid=504351475",
-                name: "Unique Equip",
-              },
-              { url: "https://docs.google.com/spreadsheets/d/1b3Vjcc-wfrVfoqI93OMGLZPrJaxpclnBAerPXZdAfc0/edit#gid=57366839", name: "Guides" },
-            ],
-            type: "menu",
-            menuName: "Docs",
-          },
-          {
-            urls: [{ url: "https://pcrdfans.com/en/battle", name: "PvP" }],
-            type: "link",
-            backgroundColor: Colors.indigo(2),
-          },
-          {
-            urls: [
-              {
-                url: "https://docs.google.com/spreadsheets/d/18VjvDwBrTinuWtqbxUxo0BNOvFpmztFO2p2D03tUxdA/edit#gid=1114939808",
-                name: "Ranking Recommendation",
-              },
-            ],
-            type: "link",
-            backgroundColor: Colors.light_blue(2),
-          },
-          {
-            urls: [
-              {
-                url: "https://fansubbing.com/priconne-tower-of-luna-guide/",
-                name: "Luna Tower",
-              },
-            ],
-            type: "link",
-          },
-        ],
-      },
-      {
-        jsonKey: "e7",
-        groupName: "Epic Seven",
-        urlGroups: [
-          {
-            urls: [
-              { url: "https://old.reddit.com/r/EpicSeven/", name: "Reddit" },
-            ],
-            type: "link",
-            backgroundColor: Colors.red(1),
-          },
-          {
-            urls: [
-              {
-                url: "https://docs.google.com/document/d/1ZQFAPU5y5BVbLgWdkegOnkcil4bZOUINdjCmTHaNuH0/edit",
-                name: "New Player",
-              },
-            ],
-            type: "link",
-          },
-          {
-            urls: [
-              {
-                url: "https://docs.google.com/presentation/d/1hFz8lTVCNdv8wUE1qbUYKd42iQMCesLpeFgNxmJ3zfc/preview#slide=id.g4e4c6ec9ea_0_145",
-                name: "Raid",
-              },
-            ],
-            type: "link",
-          },
-          {
-            urls: [{ url: "https://www.epic7stats.com", name: "Pvp DB" }],
-            type: "link",
-          },
-          {
-            urls: [{ url: "https://yufine.co/", name: "Progression Guides" }],
-            type: "link",
-            backgroundColor: Colors.light_blue(2),
-          },
-          {
-            urls: [{ url: "https://epic7x.com/tier-list/", name: "Tier" }],
-            type: "link",
-            backgroundColor: Colors.red(2),
-          },
-          {
-            urls: [
-              {
-                url: "https://e7herder.com/tools/model-viewer",
-                name: "Model Viewer",
-              },
-            ],
-            type: "link",
-          },
-          {
-            urls: [{ url: "https://epicsevendb.com/", name: "Database" }],
-            type: "link",
-          },
-        ],
-      },
-      */
-      
+      /*
       {
         jsonKey: "bluearchive",
         groupName: "Blue Archive",
@@ -923,65 +814,6 @@ export const STARTPAGE: StartPageLinks[] = [
               },
             ],
             type: "link",
-          },
-        ],
-      },
-      /*
-      {
-        jsonKey: "counterside",
-        groupName: "CounterSide",
-        urlGroups: [
-          {
-            urls: [
-              {
-                url: "https://old.reddit.com/r/CounterSide/",
-                name: "Reddit SEA",
-              },
-            ],
-            type: "link",
-            backgroundColor: Colors.red(1),
-          },
-          {
-            urls: [
-              {
-                url: "https://old.reddit.com/r/CounterSideGlobal/",
-                name: "Reddit Global",
-              },
-            ],
-            type: "link",
-            backgroundColor: Colors.red(1),
-          },
-          {
-            urls: [
-              {
-                url: "https://www.prydwen.gg/counter-side/tier-list",
-                name: "Tier",
-              },
-            ],
-            type: "link",
-          },
-          {
-            urls: [
-              {
-                url: "https://www.prydwen.gg/counter-side/guides/",
-                name: "Guides",
-              },
-            ],
-            type: "link",
-          },
-          {
-            urls: [
-              {
-                url: "https://docs.google.com/document/d/1KkxbQhrvAlpqF3h15j_PCCxxBDONTWXU1um9ahGNJHA/edit",
-                name: "Branch Building",
-              },
-              {
-                url: "https://docs.google.com/spreadsheets/d/1oD-E1EB_ayD7ZCuZDJeNgrayQr770qQSn6DGqnCZJwk/edit#gid=1252905051",
-                name: "Event Timeline",
-              },
-            ],
-            type: "menu",
-            menuName: "Docs",
           },
         ],
       },*/
@@ -1161,10 +993,9 @@ export const STARTPAGE: StartPageLinks[] = [
           },
           {
             urls: [
-              { url: "https://github.com/AUTOMATIC1111/stable-diffusion-webui", name: "Automatic Main" },
               { url: "https://github.com/vladmandic/automatic", name: "Vlad Fork" },
             ],
-            type: "menu",
+            type: "link",
             menuName: "Github Repos",
             backgroundColor: Colors.teal(1),
           },
