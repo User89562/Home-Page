@@ -94,6 +94,11 @@ export const STARTPAGE: StartPageLinks[] = [
             type: "link",
             backgroundColor: Colors.green(2),
           },
+          {
+            urls: [{ url: "https://monkeytype.com/", name: "MonkeyType" }],
+            type: "link",
+          },
+          
         ],
       },
       {
@@ -171,7 +176,12 @@ export const STARTPAGE: StartPageLinks[] = [
         groupName: "Godot",
         urlGroups: [
           {
-            urls: [{ url: "https://docs.godotengine.org/en/stable/index.html", name: "Documentation" }],
+            urls: [
+              {
+                url: "https://docs.godotengine.org/en/stable/index.html",
+                name: "Documentation",
+              },
+            ],
             type: "link",
           },
         ],
@@ -218,13 +228,6 @@ export const STARTPAGE: StartPageLinks[] = [
             ],
             type: "link",
           },
-          {
-            urls: [
-              { url: "https://www.lostarkmarket.online/north-america-east/crafting/special/fusion-material/superior-oreha-fusion-material-4-2", name: "Market" },
-            ],
-            type: "link",
-          },
-
           {
             urls: [
               {
@@ -296,7 +299,6 @@ export const STARTPAGE: StartPageLinks[] = [
           {
             urls: [
               {
-                
                 url: "https://www.lostark.nexus/",
                 name: "Community Guides",
               },
@@ -331,18 +333,15 @@ export const STARTPAGE: StartPageLinks[] = [
               {
                 url: "https://docs.google.com/document/d/1Da0MFsuencYbmcFMo6cUPBEGubavgsebeYtR7iCtaoQ/edit#heading=h.rkp1tcuxru48",
                 name: "Souleater",
-              }, 
+              },
               {
                 url: "https://docs.google.com/document/d/1hZuP7TRwvaNDBnt7QKZJB-TdJLKvgtRdxhQr104l5Qg/edit",
                 name: "Slayer",
-              },              
+              },
               {
                 url: "https://docs.google.com/document/d/12IcR8HrywQQhhThnGZxz-Gsq4KryrT5aKggGcgkX9bA/edit",
                 name: "Soulfist",
               },
-              
-              
-              
             ],
             type: "menu",
             menuName: "Class",
@@ -358,9 +357,8 @@ export const STARTPAGE: StartPageLinks[] = [
             type: "link",
             backgroundColor: Colors.indigo(1),
           },
-          
         ],
-      },/*
+      } /*
       {
         jsonKey: "gfl",
         groupName: "Neural Cloud",
@@ -395,7 +393,7 @@ export const STARTPAGE: StartPageLinks[] = [
             backgroundColor: Colors.light_blue(2),
           },
         ],
-      },*/
+      },*/,
       /*{
         jsonKey: "genshin",
         groupName: "Genshin Impact",
@@ -548,14 +546,38 @@ export const STARTPAGE: StartPageLinks[] = [
               { url: "https://old.reddit.com/r/ZZZ_Official/", name: "Reddit" },
             ],
             type: "link",
+            backgroundColor: Colors.red(1),
+          },
+          {
+            urls: [
+              {
+                url: "https://www.reddit.com/r/Zenlesszonezeroleaks_/",
+                name: "Reddit Leaks",
+              },
+            ],
+            type: "link",
+          },
+          {
+            urls: [
+              {
+                url: "https://old.reddit.com/r/ZenlessZoneZero",
+                name: "Unoffical Reddit",
+              },
+            ],
+            type: "link",
           },
           {
             urls: [
               { url: "https://www.prydwen.gg/zenless/tier-list", name: "Tier" },
             ],
             type: "link",
+            backgroundColor: Colors.purple(1),
           },
-        ]
+          {
+            urls: [{ url: "https://zzz.hakush.in/", name: "Leaks Wiki" }],
+            type: "link",
+          },
+        ],
       },
       {
         jsonKey: "browndust2",
@@ -563,17 +585,18 @@ export const STARTPAGE: StartPageLinks[] = [
         urlGroups: [
           {
             urls: [
-              { url: "https://old.reddit.com/r/BrownDust2Official/", name: "Reddit" },
+              {
+                url: "https://old.reddit.com/r/BrownDust2Official/",
+                name: "Reddit",
+              },
             ],
             type: "link",
           },
           {
-            urls: [
-              { url: "https://dotgg.gg/brown-dust-2/", name: "Tier" },
-            ],
+            urls: [{ url: "https://dotgg.gg/brown-dust-2/", name: "Tier" }],
             type: "link",
           },
-        ]
+        ],
       },
 
       /*
@@ -609,7 +632,7 @@ export const STARTPAGE: StartPageLinks[] = [
           },
         ],
       },*/
-     /* {
+      /* {
         jsonKey: "gfl",
         groupName: "Girls' Frontline",
         urlGroups: [
@@ -979,21 +1002,26 @@ export const STARTPAGE: StartPageLinks[] = [
         ],
       },
 
-     
       {
         jsonKey: "root",
         groupName: "Misc",
         urlGroups: [
           {
             urls: [
-              { url: "https://user89562.github.io/venus-arch/", name: "Hydrus Web Viewer" },
+              {
+                url: "https://user89562.github.io/venus-arch/",
+                name: "Hydrus Web Viewer",
+              },
             ],
             type: "link",
             backgroundColor: Colors.red(1),
           },
           {
             urls: [
-              { url: "https://github.com/vladmandic/automatic", name: "Vlad Fork" },
+              {
+                url: "https://github.com/vladmandic/automatic",
+                name: "Vlad Fork",
+              },
             ],
             type: "link",
             menuName: "Github Repos",
@@ -1001,7 +1029,10 @@ export const STARTPAGE: StartPageLinks[] = [
           },
           {
             urls: [
-              { url: "http://127.0.0.1:7860/", name: "Stable Diffusion Web Ui" },
+              {
+                url: "http://127.0.0.1:7860/",
+                name: "Stable Diffusion Web Ui",
+              },
             ],
             type: "link",
             backgroundColor: Colors.teal(1),
@@ -1009,16 +1040,17 @@ export const STARTPAGE: StartPageLinks[] = [
           {
             urls: [
               { url: "https://rentry.org/voldy", name: "AI Guides" },
-              { url: "https://www.sdcompendium.com/doku.php?id=weekly_news_0093", name: "SD Compendium" },
+              {
+                url: "https://www.sdcompendium.com/doku.php?id=weekly_news_0093",
+                name: "SD Compendium",
+              },
             ],
             type: "menu",
             menuName: "Info",
             backgroundColor: Colors.light_blue(1),
           },
           {
-            urls: [
-              { url: "https://civitai.com/", name: "Civitai Models" },
-            ],
+            urls: [{ url: "https://civitai.com/", name: "Civitai Models" }],
             type: "link",
             backgroundColor: Colors.purple(1),
           },

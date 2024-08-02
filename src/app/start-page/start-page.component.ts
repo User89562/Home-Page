@@ -24,16 +24,24 @@ export class StartPageComponent implements OnInit {
   jsonKeys = Object.keys(json_images_data);
   settingsUtil = new SettingsUtil();
   rendererUtil = new RendererUtil();
+  dateSetting: string = "";
 
-  constructor(private dialog: MatDialog, private router:Router) {
-
-   }
+  constructor(private dialog: MatDialog, private router:Router) {}
 
   ngOnInit() {
     // retrieve user settings
     this.settingsUtil.getSettings();
     // set inital values based on settings
     this.visibility = this.settingsUtil.getBgVisibility();
+
+    let d = new Date().toLocaleDateString("en-CA");
+    this.dateSetting = this.settingsUtil.getDateStorage();
+
+    if (this.dateSetting == "" || d != this.dateSetting) {
+      this.settingsUtil.setDateStorage(d);
+      this.tabBackgrounds = this.rendererUtil.getAllBackgrounds(this.settingsUtil.getBgMediaType(), this.settingsUtil.getBgJsonSet());
+      this.settingsUtil.setTabBackgroundStorage(this.tabBackgrounds);
+    }
 
     //retrieve tab backgrounds from settings
     this.tabBackgrounds = this.settingsUtil.getTabBackgroundStorage();
@@ -48,6 +56,9 @@ export class StartPageComponent implements OnInit {
       this.startPageLinks = this.rendererUtil.getLinkGroups(this.settingsUtil.getLgMediaType(), this.settingsUtil.getLgJsonSet());
       this.settingsUtil.setLinkgroupStorage(this.startPageLinks);
     }
+
+    
+
   }
 
   randomNumber(max: number): number {

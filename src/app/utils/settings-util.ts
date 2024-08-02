@@ -10,6 +10,7 @@ export class SettingsUtil {
     linkGroupName: string = 'link-groups';
     bgSettings: LocalStorageSettings;
     lgSettings: LocalStorageSettings;
+    dateStorage: string = "date"
 
     constructor(){
         this.bgSettings = new LocalStorageSettings('visible','default', 'image');
@@ -33,6 +34,16 @@ export class SettingsUtil {
       this.lgSettings = JSON.parse(localStorage.getItem(this.lgStorageName) || '');
     }
 
+    getDateStorage(): string{
+      if (localStorage.getItem(this.dateStorage)){
+        return JSON.parse(localStorage.getItem(this.dateStorage) || '')
+      }
+      return '';
+    }
+
+    setDateStorage(date: string) {
+      localStorage.setItem(this.dateStorage, JSON.stringify(date));
+    }
     getTabBackgroundStorage(): TabBackground[] {
       if (localStorage.getItem(this.tabBackgroundName)){
         return JSON.parse(localStorage.getItem(this.tabBackgroundName) || '')

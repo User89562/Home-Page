@@ -42,6 +42,11 @@ export class RendererUtil {
         path = "image/default/";
       }
 
+      let ranNumber = this.randomNumber(
+        links?.length!,
+        element.jsonKey
+      );
+
       bgs.push(
         new TabBackground(
           element.tabIndex,
@@ -49,7 +54,7 @@ export class RendererUtil {
             path +
             element.jsonKey +
             "/" +
-            links[this.dayOfMonth % links.length]
+            links[ranNumber]
         )
       );
     });
@@ -77,10 +82,12 @@ export class RendererUtil {
           linkGroupImages = data[linkGroup.jsonKey];
           path = "image/default/";
         }
+    
         let ranNumber = this.randomNumber(
           linkGroupImages?.length!,
           linkGroup.jsonKey
         );
+
         // if jsonkey is root then set the random number to the array
         if (linkGroup.jsonKey === "root") {
           this.rootNums.push(ranNumber);
