@@ -98,7 +98,7 @@ export const STARTPAGE: StartPageLinks[] = [
             urls: [{ url: "https://monkeytype.com/", name: "MonkeyType" }],
             type: "link",
           },
-          
+
         ],
       },
       {
@@ -148,7 +148,7 @@ export const STARTPAGE: StartPageLinks[] = [
         groupName: "Angular",
         urlGroups: [
           {
-            urls: [{ url: "https://angular.io/start", name: "Angular Wiki" }],
+            urls: [{ url: "https://angular.dev/", name: "Angular Wiki" }],
             type: "link",
           },
           {
@@ -231,8 +231,8 @@ export const STARTPAGE: StartPageLinks[] = [
           {
             urls: [
               {
-                url: "https://lostmerchants.com/",
-                name: "Merchants",
+                url: "https://maxroll.gg/lost-ark/upgrade-calculator",
+                name: "Honing Cal",
               },
             ],
             type: "link",
@@ -240,24 +240,38 @@ export const STARTPAGE: StartPageLinks[] = [
           {
             urls: [
               {
-                url: "https://cho.elphago.work/en",
-                name: "Transcendence Cal",
+                url: "https://docs.google.com/spreadsheets/d/1QcnJXKFzTNdyCOWA5CWzbLFiBlRGA_hJhxUvUXuAP6E/edit#gid=207129209",
+                name: "Raid/Bus",
+              },
+            ],
+            type: "link",
+          },
+          {
+            urls: [
+              {
+                url: "https://uwuowo.mathi.moe/",
+                name: "Look-Up",
+              },
+            ],
+            type: "link",
+          },
+          {
+            urls: [
+              {
+                url: "https://www.lostmokokos.com/raids/thaemine",
+                name: "Raid Gold",
               },
               {
-                url: "https://loa-todo.com/engrave",
-                name: "Engraving Planner",
-              },
-              {
-                url: "https://maxroll.gg/lost-ark/upgrade-calculator",
-                name: "Honing Cal",
-              },
-              {
-                url: "https://www.mococo.gg/alpha-stone",
-                name: "Ability Stone Cal 2",
-              },
-              {
-                url: "https://logs.fau.dev/logs",
+                url: "https://raided.pro/loa-logs",
                 name: "DPS Logs",
+              },
+              {
+                url: "https://logs.snow.xyz/",
+                name: "DPS Logs 2",
+              },
+              {
+                url: "https://github.com/snoww/loa-logs",
+                name: "Meter",
               },
             ],
             type: "menu",
@@ -272,25 +286,18 @@ export const STARTPAGE: StartPageLinks[] = [
           {
             urls: [
               {
-                url: "https://docs.google.com/spreadsheets/d/1N4Dpo-Z_BPiMNaaVgVx0EGtWB7AMKOUEK-RGDwCzJTE/edit?usp=sharing",
-                name: "Currency Exchange",
+                url: "https://docs.google.com/spreadsheets/d/1zI7Wtggb2ZyFnN_S1Ht5Sv1giQBOk_tFQ1EbkZsXbPw/edit?usp=sharing",
+                name: "Tracking",
               },
               {
                 url: "https://docs.google.com/spreadsheets/d/11hAUi2OUd4aJR5IRvFwyUlq7VDPMS_brFFGWRLitxqU/edit?usp=sharing",
                 name: "Boss Mechanics",
               },
               {
-                url: "https://docs.google.com/spreadsheets/d/1zI7Wtggb2ZyFnN_S1Ht5Sv1giQBOk_tFQ1EbkZsXbPw/edit?usp=sharing",
-                name: "Tracking",
-              },
-              {
-                url: "https://docs.google.com/spreadsheets/d/1QcnJXKFzTNdyCOWA5CWzbLFiBlRGA_hJhxUvUXuAP6E/edit#gid=207129209",
-                name: "Raid/Bus",
-              },
-              {
                 url: "https://docs.google.com/spreadsheets/d/1YQpWt8iOK6yO5_7r3rvZZKkoRy8Z0aEAPHy11gYZZQ8/edit#gid=692731892",
                 name: "Raid Loot",
               },
+
             ],
             type: "menu",
             menuName: "Docs",
@@ -307,20 +314,8 @@ export const STARTPAGE: StartPageLinks[] = [
                 name: "Aeromancer",
               },
               {
-                url: "https://docs.google.com/document/d/1MWWgdrTIJBj0WXmAqE4DspVobgMlDx4aaI7ZwCj1-AM/edit",
-                name: "Arcana",
-              },
-              {
                 url: "https://docs.google.com/document/d/1OlCBWkiQRt0odr6BoOotxTpzhDcoEAicv8vJdzJIViI/edit",
                 name: "Artist",
-              },
-              {
-                url: "https://docs.google.com/document/d/1hgR9_xMPaB95NUPgEx0hwgE9vjAQQCeVK6S74ZDnR58/edit#",
-                name: "Bard",
-              },
-              {
-                url: "https://docs.google.com/document/d/1ZLOhLB9bb9AN_Q7_eKukUnqI5E5w5Fb1oqryIA1ml8A/edit?usp=sharing",
-                name: "Deathblade",
               },
               {
                 url: "https://docs.google.com/document/d/1Dr4egW6_YR7JGkukK-pbPXg3ckbfE31iuMxOSSudD64/edit",
@@ -333,14 +328,6 @@ export const STARTPAGE: StartPageLinks[] = [
               {
                 url: "https://docs.google.com/document/d/1Da0MFsuencYbmcFMo6cUPBEGubavgsebeYtR7iCtaoQ/edit#heading=h.rkp1tcuxru48",
                 name: "Souleater",
-              },
-              {
-                url: "https://docs.google.com/document/d/1hZuP7TRwvaNDBnt7QKZJB-TdJLKvgtRdxhQr104l5Qg/edit",
-                name: "Slayer",
-              },
-              {
-                url: "https://docs.google.com/document/d/12IcR8HrywQQhhThnGZxz-Gsq4KryrT5aKggGcgkX9bA/edit",
-                name: "Soulfist",
               },
             ],
             type: "menu",
@@ -538,6 +525,60 @@ export const STARTPAGE: StartPageLinks[] = [
         ],
       },
       {
+        jsonKey: "gfl2",
+        groupName: "GFL2",
+        urlGroups: [
+          {
+            urls: [
+              { url: "https://old.reddit.com/r/GirlsFrontline2/", name: "Reddit" },
+            ],
+            type: "link",
+          },
+          {
+            urls: [{ url: "https://iopwiki.com/wiki/GFL2_Doll_Index", name: "Wiki" }],
+            type: "link",
+            backgroundColor: Colors.green(1),
+          },
+          {
+            urls: [{ url: "https://www.prydwen.gg/gfl-exilium/tier-list", name: "Prydwen" }],
+            type: "link",
+            backgroundColor: Colors.purple(2),
+          },
+          {
+            urls: [{ url: "https://lootandwaifus.com/girls-frontline-2/", name: "Loot&Waifus" }],
+            type: "link",
+            backgroundColor: Colors.purple(0),
+          },
+          {
+            urls: [ {
+              url: "https://docs.google.com/spreadsheets/d/1DogyU3K7ZXw2qbhP1EhRXIAw5nCyIV5G5e-QWviBZME/htmlview?gid=1909726070#",
+               name: "Equipment",
+           },],
+            type: "link",
+            backgroundColor: Colors.purple(0),
+          },
+          {
+            urls: [
+              {
+                url: "https://docs.google.com/spreadsheets/d/1wV9u_dks-_FVocz5du7FSQE6p5pV29bZkBcMRQmSOh0/edit?gid=569052699#gid=569052699",
+                name: "Premium Shop",
+              },
+              {
+                url: "https://docs.google.com/document/d/134CEb77HGtEsa81UQWK9wyTm4KwoKFZxs7-cdM0bTO0/edit?tab=t.0",
+                name: "Dork Tips",
+              },
+              {
+                url: "https://docs.google.com/document/d/1Lw45-3H96lrYUAigMgP5LNRndbB6v9aMMFSvW4klP_I/preview?tab=t.0#heading=h.2mhfyo5hz8hv",
+                name: "Beginner Guide",
+              },
+            ],
+            type: "menu",
+            menuName: "Guides",
+            backgroundColor: Colors.light_blue(2),
+          },
+        ],
+      },
+      /*{
         jsonKey: "zzz",
         groupName: "Zenless Zone Zero",
         urlGroups: [
@@ -578,7 +619,7 @@ export const STARTPAGE: StartPageLinks[] = [
             type: "link",
           },
         ],
-      },
+      },*/
       {
         jsonKey: "browndust2",
         groupName: "Brown Dust 2",
@@ -594,6 +635,10 @@ export const STARTPAGE: StartPageLinks[] = [
           },
           {
             urls: [{ url: "https://dotgg.gg/brown-dust-2/", name: "Tier" }],
+            type: "link",
+          },
+          {
+            urls: [{ url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vTfoq_KVFOpM-0PYUFx41lmaHczJtY0RaX2mINQ9VU4tQb19m63zOjYLDnVpgvOXCIrQjzEos5dH6jg/pubhtml#", name: "Upcoming" }],
             type: "link",
           },
         ],
